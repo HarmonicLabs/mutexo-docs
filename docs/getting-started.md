@@ -33,31 +33,7 @@ You can move the directory where you need it
 
 :::
 
-## Quick start
----
-
-First create a new directory where to build your project
-```
-mkdir my-mutexo-server-project
-cd my-mutexo-server-project
-```
-
-Then initialize your node project with `npm`
-```
-npm init
-```
-
-Install `typescript` and the typescript compiler `tsc` if it is not already available globally
-```
-npm install --save-dev typescript
-```
-
-Finally install `mutexo-server`
-```
-npm install @harmoniclabs/mutexo-server
-```
-
-### Local Development
+## Local Development
 
 IMPORTANT
 
