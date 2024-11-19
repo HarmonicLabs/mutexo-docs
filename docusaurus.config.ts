@@ -37,27 +37,13 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/HarmonicLabs/mutexo-server-docs',
         },
         blog: false,
-        // blog: {
-        //   showReadingTime: true,
-        //   feedOptions: {
-        //     type: ['rss', 'atom'],
-        //     xslt: true,
-        //   },
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/HarmonicLabs/mutexo-server-docs',
-        //   // Useful options to enforce blogging best practices
-        //   onInlineTags: 'warn',
-        //   onInlineAuthors: 'warn',
-        //   onUntruncatedBlogPosts: 'warn',
-        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -111,19 +97,7 @@ const config: Config = {
                     {
                         label: 'Intro',
                         to: '/',
-                    },
-                    {
-                        label: 'examples',
-                        to: '/category/examples',
-                    },
-                    // {
-                    //     label: 'onchain',
-                    //     to: '/category/onchain',
-                    // },
-                    // {
-                    //     label: 'offchain',
-                    //     to: '/category/offchain',
-                    // }
+                    }
                 ]
             },
             {
@@ -133,10 +107,10 @@ const config: Config = {
                         label: 'Discord',
                         href: 'https://discord.gg/CGKNcG7ade',
                     },
-                    // {
-                    //     label: 'Twitter',
-                    //     href: 'https://twitter.com/plu_ts',
-                    // }
+                    {
+                        label: 'Twitter',
+                        href: 'https://x.com/hlabs_tech',
+                    }
                 ]
             },
             {
@@ -156,8 +130,34 @@ const config: Config = {
         copyright: `Copyright © ${new Date().getFullYear()} Harmonic Laboratories Srl.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+        magicComments: [
+            // Remember to extend the default highlight class name as well!
+            {
+                className: 'theme-code-block-highlighted-line',
+                line: 'highlight-next-line',
+                block: {start: 'highlight-start', end: 'highlight-end'},
+            },
+            {
+                className: 'code-block-error-line',
+                line: 'highlight-error',
+            },
+            {
+                className: 'code-solution',
+                line: 'highlight-solution',
+            },
+            {
+                className: 'code-bad-practice',
+                line: 'highlight-bad-practice',
+                block: {start: 'bad-practice-start', end: 'bad-practice-end'},
+            },
+            {
+                className: 'code-bad-practice',
+                line: 'highlight-bad',
+                block: {start: 'bad-start', end: 'bad-end'},
+            }
+        ]
     },
   } satisfies Preset.ThemeConfig,
 };
