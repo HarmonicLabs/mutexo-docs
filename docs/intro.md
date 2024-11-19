@@ -1,47 +1,24 @@
 ---
 sidebar_position: 1
+slug: /
 ---
 
-# Tutorial Intro
+# mutexo-server
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Built with ❤️ by [Harmonic Laboratories](https://www.harmoniclabs.tech/)
 
-## Getting Started
+This documentation is for `mutexo-server` v0.0.1^, if you are using a previous version it is suggested to install the latest version, feel free to ask for help in the [Harmonic Labs' discord server](https://discord.gg/CGKNcG7ade)
 
-Get started by **creating a new site**.
+## Introduction
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+`mutexo-server` is a library designed for ...
 
-### What you'll need
+# Getting started
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+See [Getting Started](./Getting%20Started) to begin your journey with `mutexo-server`
 
-## Generate a new site
+## Design principles
 
-Generate a new Docusaurus site using the **classic template**.
+`mutexo-server` was designed with the following goals in mind, in order of importance:
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- ...
