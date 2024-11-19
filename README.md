@@ -9,22 +9,7 @@ npm install
 
 ### Local Development
 
-IMPORTANT
-
-Before running the application make sure:
-
-* you have a working Cardano node running on the background (more info to run a node [here](https://developers.cardano.org/docs/get-started/cardano-node/running-cardano/))
-
-* you have a `.env` file in the root of the project specifying the following environment variables
-
-```
-FIRST_ADDRESS=""
-SECOND_ADDRESS=""
-```
-
-`FIRST_ADDRESS` and `SECOND_ADDRESS` are test addresses to be followed once the server enters the test mode
-
-Then you can run:
+You can run:
 
 ```
 npm run start
