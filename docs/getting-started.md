@@ -79,7 +79,7 @@ REDIS_URL="♦"
 
 where ♦ follow the syntax described [here](https://github.com/redis/node-redis/blob/master/docs/client-configuration.md).
 
-If the URL is not considered valid, a default REDIS_URL ("redis://localhost:6379") will be used to access the database.
+If the URL is not considered valid, a default `REDIS_URL` ("redis://localhost:6379") will be used to access the database.
 
 ## Ready to go
 
