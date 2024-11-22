@@ -11,14 +11,8 @@ This documentation is for `mutexo-server` v0.0.1^, if you are using a previous v
 
 ## Introduction
 
-`mutexo-server` is a library designed for ...
+`mutexo-server` is a library designed to access and modify a Redis database by submitting freeing or locking requests from a [`mutexo-client`](https://github.com/HarmonicLabs/mutexo-client).
 
 # Getting started
 
-See [Getting Started](./Getting%20Started) to begin your journey with `mutexo-server`
-
-## Design principles
-
-`mutexo-server` was designed with the following goals in mind, in order of importance:
-
-- ...
+See [Getting Started](./Getting%20Started) to begin your journey with `mutexo-server`!
