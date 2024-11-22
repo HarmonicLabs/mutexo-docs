@@ -41,7 +41,7 @@ Before running the application make sure:
 
 * you have a `.env` file in the root of the project specifying the following environment variables:
 
-1) ADDRESSES
+### ADDRESSES
 
 If you are going to use `mutexo-server` in test mode, you will need to pass some test addresses into your `.env` file by the following way:
 
@@ -67,7 +67,7 @@ The addresses must all belong to the same net (see [this](https://cips.cardano.o
 
 Those fields allow you to automatically detect and save a certain number of txs triggered by or involving the given addresses. The amount of txs to be recorded must be specified during the CLI invocation (if the value is not declared a parachute value will be passed by default).
 
-2) REDIS_URL
+### REDIS_URL
 
 `REDIS_URL` is a necessary field if your intent is to access easly a remote Redis database.
 
@@ -81,7 +81,7 @@ where ♦ follow the syntax described [here](https://github.com/redis/node-redis
 
 If the URL is not considered valid, a default `REDIS_URL` ("redis://localhost:6379") will be used to access the database.
 
-## Ready to go
+## Ready To Go
 
 Then you can run:
 
