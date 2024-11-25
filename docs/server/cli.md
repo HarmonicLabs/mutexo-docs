@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Once you start `mutexo-server` by running
 
-```
+```shell
 npm run start
 ```
 
@@ -18,13 +18,13 @@ This mode is designed to access a (local or remote) [Redis host](https://redis.i
 
 Once you run
 
-```
+```shell
 npm run cli-main-help
 ```
 
 the following CLI will be displayed:
 
-```
+```shell
 Usage: mutexo-server main [options] [path]
 
 It starts the WSS
@@ -39,7 +39,7 @@ Options:
 
 For reference, you could run something like:
 
-```
+```shell
 npm run start mutexo-server main ../folder/.env -ru redis://username:superSecretPassword1234@192.168.1.1:3000/3
 ```
 
@@ -55,13 +55,13 @@ This mode is specially designed to return a `test-txs/test-txs.json` file contai
 
 Once you run
 
-```
+```shell
 npm run cli-test-help
 ```
 
 the following CLI will be displayed:
 
-```
+```shell
 Usage: mutexo-server test [options] [path]
 
 It starts the WSS in test mode
@@ -76,7 +76,7 @@ Options:
 
 For reference, you could run something like:
 
-```
+```shell
 npm run start mutexo-server test ../folder/.env -a 10 -ru redis://username:superSecretPassword1234@192.168.1.1:3000/3
 ```
 
@@ -84,6 +84,6 @@ npm run start mutexo-server test ../folder/.env -a 10 -ru redis://username:super
 
 `mutexo-server` test mode can be entered using default values by running:
 
-```
+```shell
 npm run cli-test-default
 ```

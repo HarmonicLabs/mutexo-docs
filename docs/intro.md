@@ -3,16 +3,12 @@ sidebar_position: 0
 slug: /
 ---
 
-# mutexo-server
+# Overview
 
 Built with ❤️ by [Harmonic Laboratories](https://www.harmoniclabs.tech/)
 
-This documentation is for `mutexo-server` v0.0.1^, if you are using a previous version it is suggested to install the latest version, feel free to ask for help in the [Harmonic Labs' discord server](https://discord.gg/CGKNcG7ade)
+This documentation covers [`mutexo-server`](./server/getting-started.md) CLI and [`mutexo-client`](./client/getting-started.md) APIs.
 
-## Introduction
+If you are using an older version, it is recommended to update to the latest version. 
 
-`mutexo-server` is a library designed to access and modify a Redis database by submitting freeing or locking requests from a [`mutexo-client`](https://github.com/HarmonicLabs/mutexo-client).
-
-# Getting started
-
-See [Getting Started](./Getting%20Started) to begin your journey with `mutexo-server`!
+For assistance, join our [Discord server](https://discord.gg/CGKNcG7ade).

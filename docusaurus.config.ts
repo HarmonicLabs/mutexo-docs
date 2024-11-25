@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-    title: 'mutexo-server',
+    title: 'mutexo-docs',
     tagline: 'Mutexo Server Documentation',
     favicon: 'img/favicon.ico',
 
@@ -18,7 +18,7 @@ const config: Config = {
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'Harmonic Laboratories', // Usually your GitHub org/user name.
-    projectName: 'mutexo-server', // Usually your repo name.
+    projectName: 'mutexo-docs', // Usually your repo name.
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -41,7 +41,7 @@ const config: Config = {
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
             editUrl:
-                'https://github.com/HarmonicLabs/mutexo-server-docs',
+                'https://github.com/HarmonicLabs/mutexo-docs-docs',
             },
             blog: false,
             theme: {
@@ -66,7 +66,7 @@ const config: Config = {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
         navbar: {
-            title: 'mutexo-server',
+            title: 'mutexo-docs',
             logo: {
                 alt: 'My Site Logo',
                 src: 'img/logo.svg',
@@ -76,10 +76,10 @@ const config: Config = {
                     type: 'doc',
                     docId: 'intro',
                     position: 'left',
-                    label: 'Docs',
+                    label: 'Home',
                 },
                 {
-                    href: 'https://github.com/HarmonicLabs/mutexo-server',
+                    href: 'https://github.com/HarmonicLabs/mutexo-docs',
                     label: 'GitHub ⭐',
                     position: 'right',
                 },
@@ -100,8 +100,16 @@ const config: Config = {
                     title: 'Docs',
                     items: [
                         {
-                            label: 'Intro',
+                            label: 'Introduction',
                             to: '/',
+                        },
+                        {
+                            label: 'mutexo-server',
+                            to: '/mutexo-server',
+                        },
+                        {
+                            label: 'mutexo-client',
+                            to: '/mutexo-client',
                         }
                     ]
                 },
@@ -123,7 +131,7 @@ const config: Config = {
                     items: [
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/HarmonicLabs/mutexo-server',
+                            href: 'https://github.com/HarmonicLabs/mutexo-docs',
                         },
                         {
                             label: 'Harmonic Labs',
