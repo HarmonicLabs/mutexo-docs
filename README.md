@@ -1,4 +1,4 @@
-# mutexo-server-docs
+# mutexo-docs
 
 Documentation for both [`mutexo-server`](https://github.com/HarmonicLabs/mutexo-server) and [`mutexo-client`](https://github.com/HarmonicLabs/mutexo-client) libraries
 
