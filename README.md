@@ -1,6 +1,6 @@
 # mutexo-server-docs
 
-Documentation for the [`mutexo-server`](https://github.com/HarmonicLabs/mutexo-server) library
+Documentation for both [`mutexo-server`](https://github.com/HarmonicLabs/mutexo-server) and [`mutexo-server`](https://github.com/HarmonicLabs/mutexo-client) libraries
 
 ### Installing
 ```
