@@ -49,14 +49,34 @@ import { MutexoClient } from "@harmoniclabs/mutexo-client";
 
 ### Creating a MutexoClient Instance
 
-To create an instance of `MutexoClient`, you need to pass a WebSocket instance to its constructor:
+To create an instance of `MutexoClient`, you need to ask the server for your unique token by doing
+
+```typescript
+const token = await fetch(
+    "http://your-websocket-url/wsAuth", 
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+);
+```
+
+and then pass the tokenized WebSocket instance to its constructor:
 
 ```typescript
 import WebSocket from "ws";
 
-const ws = new WebSocket("ws://your-websocket-url");
-const client = new MutexoClient(ws);
+const ws = new WebSocket("ws://your-websocket-url/events?token=" + token);
+const client = new MutexoClient( ws );
 ```
+
+:::warning 
+
+For this code to work you will need a working [mutexo-server](../server/getting-started.md#getting-started) already running in the background!
+
+:::
 
 ### Closing the Client
 
