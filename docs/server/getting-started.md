@@ -6,85 +6,98 @@ sidebar_position: 0
 
 ## Installation
 
-### from `npm`
 ```
-npm install @harmoniclabs/mutexo-server
-```
-
-:::tip npm
-
-`npm` is the package manager use by `NodeJS` you can install `node` and `npm` from the [`NodeJS` website](https://nodejs.org/en/)
-
-:::
-
-### from source
-
-```
-git clone https://github.com/HarmonicLabs/mutexo-server
-cd mutexo-server
-npm run build
+npm install -g @harmoniclabs/mutexo-server
 ```
 
-:::tip The `dist` folder
+## Cardano node
 
-The library is then available in the `dist` folder.
+Before running `mutexo-server` you will need a properly working Cardano node running for the tool to connect to.
 
-You can move the directory where you need it
 
-:::
+<details>
+<summary>
 
-## Local Development
+### `cardano-node` quickstart
 
-Before running the application make sure:
+</summary>
 
-* you have a properly working Cardano node running on the background (more info on how to run a node [here](https://developers.cardano.org/docs/get-started/cardano-node/running-cardano/))
+<p>
 
-* you have a `.env` file in the root of the project specifying the following environment variables:
+Here we'll go over some quick comands to quicly setup a node in preprod testnet.
 
-### ADDRESSES
+First create a fresh directory if you don't have already one to work in
 
-If you are going to use `mutexo-server` in test mode, you will need to pass some test addresses into your `.env` file by the following way:
-
-```
-ADDRESSES=ADDRESS_1,ADDRESS_2,...
-ADDRESS_1="♠"
-ADDRESS_2="♥"
-...
+```shell
+mkdir tmp-cardano
+cd tmp-cardano
 ```
 
-where ♠ and ♥ are the wallets addresses string, e.g.:
+#### installation
 
-```
-ADDRESS_1="addr_test1qrglcpgt7ssmdf32q9x4fjst04thlyxj7lj9md3kgcu42u2sdfsuhtax90u3pyxdc73wshpfw24jj2p4m8g30es3ej8ql9d3gg"
-ADDRESS_2="addr_test1qrcdeqdkpup2acyn3tpus0dmgs54kew8uqhd4v23ke6a2p6ac7yptelhy9alxgma2l9xfcxme2pl0ruun7jvslfs7pqqufnp59"
-```
+If you don't already have one, install the `cardano-node` binaries from the [official github repository](https://github.com/IntersectMBO/cardano-node/releases/)
 
-:::warning Look closely
+once you have the binaries, move or copy them in a directory where the computer can find it.
 
-The addresses must all belong to the same net (see [this](https://cips.cardano.org/cip/CIP-19)).
+In linux usually `/usr/bin` should work
 
-:::
-
-Those fields allow you to automatically detect and save a certain number of txs triggered by or involving the given addresses. The amount of txs to be recorded must be specified during the CLI invocation (if the value is not declared a parachute value will be passed by default).
-
-### REDIS_URL
-
-`REDIS_URL` is a necessary field if your intent is to access easly a remote Redis database.
-
-It works in both test and server modes and it must be declared inside your `.env` file in the following way:
-
-```
-REDIS_URL="♦"
+```shell
+cp path/to/binary/cardano-node /usr/bin/cardano-node
 ```
 
-where ♦ follow the syntax described [here](https://github.com/redis/node-redis/blob/master/docs/client-configuration.md).
+if you have installed it correctly running
 
-If the URL is not considered valid, a default `REDIS_URL` ("redis://localhost:6379") will be used to access the database.
-
-## Ready To Go
-
-Then you can run:
-
+```shell
+cardano-node --version
 ```
-npm run start
+
+should work without errors.
+
+### running
+
+Once you have the node, inside our directory, we'll create a place for all the configurations files the cardano node needs
+
+```shell
+mkdir config_files
+cd config_files
 ```
+
+where we'll fetch the files needed as described in the [`cardano-node` documentation](https://developers.cardano.org/docs/get-started/cardano-node/running-cardano/#testnet--preprod)
+
+```shell
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/config.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/db-sync-config.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/submit-api-config.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/topology.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/byron-genesis.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/shelley-genesis.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/alonzo-genesis.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/conway-genesis.json
+```
+
+with this configuration files we can go back
+
+```shell
+cd ..
+```
+
+and finally we can run the node
+
+```shell
+cardano-node run \
+   --topology ./config_files/topology.json \
+   --database-path ./db \
+   --socket-path ./db/node.socket \
+   --config ./config_files/config.json \
+   --host-addr 0.0.0.0 \
+   --port 3000
+```
+
+</p>
+
+</details>
+
+
+### `cardano-node` docs
+
+more info on how to run a node [here](https://developers.cardano.org/docs/get-started/cardano-node/running-cardano/).

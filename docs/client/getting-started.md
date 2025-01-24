@@ -6,40 +6,11 @@ sidebar_position: 0
 
 ## Installation
 
-### from `npm`
-```
+```shell
 npm install @harmoniclabs/mutexo-client
 ```
 
-:::tip npm
-
-`npm` is the package manager use by `NodeJS` you can install `node` and `npm` from the [`NodeJS` website](https://nodejs.org/en/)
-
-:::
-
-### from source
-
-```
-git clone https://github.com/HarmonicLabs/mutexo-client
-cd mutexo-client
-npm run build
-```
-
-:::tip The `dist` folder
-
-The library is then available in the `dist` folder.
-
-You can move the directory where you need it
-
-:::
-
-## Local Development
-
-Before running the application make sure you have a properly running [mutexo-server](../server/getting-started.md#getting-started).
-
-## Using MutexoClient
-
-### Importing the Library
+## Importing the Library
 
 To use `MutexoClient`, you need to import it into your project. Here is an example of how to do it:
 
@@ -47,38 +18,41 @@ To use `MutexoClient`, you need to import it into your project. Here is an examp
 import { MutexoClient } from "@harmoniclabs/mutexo-client";
 ```
 
-### Creating a MutexoClient Instance
+## Creating a `MutexoClient` Instance
 
-To create an instance of `MutexoClient`, you need to ask the server for your unique token by doing
+A `MutexoClient` instance is a useful interface that manages all the events coming from the server.
 
-```typescript
-const token = await fetch(
-    "http://your-websocket-url/wsAuth", 
-    {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-        },
-    }
+In order to connect to the client you will need to do so via an unique link provided by the server.
+
+### `getWsUrl`
+
+The `MutexoClient` class provides the `getWsUrl` static method.
+
+you will need to provide the http url where the server is running;
+`getWsUrl` will fetch an unique auth token and construct a valid link to pass to the [standard 
+`WebSocket` class](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket).
+
+### easiest way to construct a `MutexoClient`
+
+using `getWsUrl` the simplest way to get a client is:
+
+```ts
+const myMutexoServerUrl = "http://my-mutexo-sever.io:3001";
+
+const mutexo = new MutexoClient(
+    new WebSocket(
+        await MutexoClient.getWsUrl( myMutexoServerUrl )
+    )
 );
 ```
 
-and then pass the tokenized WebSocket instance to its constructor:
+notice that `getWsUrl` is `async` so you will need to use `await` when you call it.
 
-```typescript
-import WebSocket from "ws";
+## Using the client
 
-const ws = new WebSocket("ws://your-websocket-url/events?token=" + token);
-const client = new MutexoClient( ws );
-```
+have a look at the [API](../category/api) section to see what the client can do for you.
 
-:::warning 
-
-For this code to work you will need a working [mutexo-server](../server/getting-started.md#getting-started) already running in the background!
-
-:::
-
-### Closing the Client
+## Closing the Client
 
 To close the `MutexoClient` instance, use the `close` method:
 
@@ -87,11 +61,3 @@ client.close();
 ```
 
 This will close the WebSocket connection and clean up resources.
-
-## Ready To Go
-
-Then you can run:
-
-```
-npm run start
-```

@@ -1,89 +1,81 @@
 ---
 sidebar_position: 1
+title: CLI
 ---
 
 # CLI
 
-Once you start `mutexo-server` by running
+Once you have [installed mutexo-server](./getting-started#installation) you should have the `mutexo-server` comand aviable in you shell.
 
 ```shell
-npm run start
+mutexo-server
 ```
 
-a CLI appear allowing you to possibly enter two different modes:
-
-## Main Mode
-
-This mode is designed to access a (local or remote) [Redis host](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/) and handles all the requests a [`mutexo-client`](https://github.com/HarmonicLabs/mutexo-client) could ask, such as freeing and locking addresses or utxos.
-
-Once you run
+by running it you should get something like the following output
 
 ```shell
-npm run cli-main-help
-```
+Usage: mutexo-server [options] [command]
 
-the following CLI will be displayed:
-
-```shell
-Usage: mutexo-server main [options] [path]
-
-It starts the WSS
-
-Arguments:
-  path                       path to the .env file containing all the redis access credentials
+Mutexo Web Socket Server CLI
 
 Options:
-  -ru, --redis-url <string>  redis url to access the database as described at https://github.com/redis/node-redis/blob/master/docs/client-configuration.md (default: "redis://localhost:6379")
-  -h, --help                 display help for command
+  -V, --version    output the version number
+  -h, --help       display help for command
+
+Commands:
+  version          Prints the version of the program
+  start [options]  Starts the mutexo server
+  help [command]   display help for command
 ```
 
-For reference, you could run something like:
+## `start` command
+
+as you can see from above, pretty much the only command aviable is `mutexo-server start`.
+
+however you could use the other `help` command to gather some more infos about it:
 
 ```shell
-npm run start mutexo-server main ../folder/.env -ru redis://username:superSecretPassword1234@192.168.1.1:3000/3
+mutexo-client help start
 ```
 
-:::warning `.env` file and `REDIS_URL`
+that should output:
 
-Note that, for this mode to work, at least one between `path` and `--redis-url` must be provided: if neither are given `mutexo-server` won't be able to access Redis.
+```shell
+Usage: mutexo-server start [options]
+
+Starts the mutexo server
+
+Options:
+  -c, --config <string>            path to the json configuration file (default: "./mutexo-config.json")
+  -n, --network <string>           specify the network to use, either mainnet | preview | preprod; otherwise the network magic
+                                   number (default: "mainnet")
+  -E, --ignore-env                 explicitly ignores the .env file (default: false)
+  -a, --addr <string>              cardano address to be monitored, can be specified multiple times
+  -s, --node-socket-path <string>  path to the cardano-node socket
+  -p, --port <number>              port for the WebSocket server to listen to (default: "3001")
+  -h, --help                       display help for command
+```
+
+Other than the `--config` option, all others can be specified in a [configuration file](./config).
+
+:::info cli options have the precedence
+
+While you can specify all these options in the config file, if you do specify them as options these will overwrite the respective value in the config file.
+
+That is unless the option can have many values (eg. `--addr`), where it will just be prepended to the array of values in the config (if any).
 
 :::
 
-## Test Mode
+### configuration path resolution
 
-This mode is specially designed to return a `test-txs/test-txs.json` file containing a certain amount of transactions that involve or has been triggered by the same addresses specified in the environment variables (see [here](getting-started.md#local-development) to properly set the `.env` file).
+You can use the `--config` option to specify a path where to find the configuration file.
 
-Once you run
+If `--config` is not specified, `mutexo-server` will try to look for a configuration at the path `./mutexo-config.json`.
 
-```shell
-npm run cli-test-help
-```
+If no configuration is found, the default values will be used.
 
-the following CLI will be displayed:
+In short, the steps to derive the configurations are
 
-```shell
-Usage: mutexo-server test [options] [path]
-
-It starts the WSS in test mode
-
-Arguments:
-  path                       path to the .env file containing test addresses and redis access credentials (default: "./.env")
-
-Options:
-  -a, --amount <int>         number of test addresses txs to be saved (default: "2")
-  -ru, --redis-url <string>  redis url to access the database as described at https://github.com/redis/node-redis/blob/master/docs/client-configuration.md (default: "redis://localhost:6379")
-```
-
-For reference, you could run something like:
-
-```shell
-npm run start mutexo-server test ../folder/.env -a 10 -ru redis://username:superSecretPassword1234@192.168.1.1:3000/3
-```
-
-### Default Running
-
-`mutexo-server` test mode can be entered using default values by running:
-
-```shell
-npm run cli-test-default
-```
+1) use path specified using the `--config` option
+2) if `--config` is not used, `./mutexo-config.json` will be used
+3) if no cofiguration is found, all the default values will be used

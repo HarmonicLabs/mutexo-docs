@@ -1,0 +1,80 @@
+---
+sidebar_position: 2
+title: Configuration
+---
+
+# Configuration
+
+The interface expected in the json file used as configuration is the following:
+
+```ts
+interface MutexoServerConfig {
+    ignoreEnv: boolean;
+    network: "mainet" | "preview" | "preprod" | number;
+    nodeSocketPath: string;
+    addrs: string[];
+    port: number;
+}
+```
+
+each of which can be specified (and overwritten) directly by the [cli](./cli).
+
+## `ignoreEnv`
+
+In the [cli](./cli): `-E` or `--ignore-env`.
+
+defaults to `false`.
+
+if explicitly setted to `true`, the environment variables, including the ones specified in `.env` files will be ignored.
+
+:::warning `CARDANO_NODE_SOCKET_PATH`
+
+it is common in cardano development to use the environment variable `CARDANO_NODE_SOCKET_PATH` to indicate the path where the cardano-node socket is present.
+
+if you use `--ignore-env`, make sure to specify a `--node-socket-path`.
+
+:::
+
+## `network`
+
+In the [cli](./cli): `-n` or `--network`.
+
+defaults to `"mainnet"`;
+
+it can be either the strings `"mainnet"`, `"preview"` or `"preprod"`, or else a `number` to be used as network magic (usually devnets and private testnets) can be specified.
+
+## `nodeSocketPath`
+
+In the [cli](./cli): `-s` or `--node-socket-path`.
+
+If `ignoreEnv` is set to `false` (default), the default value of `nodeSocketPath` will be the `CARDANO_NODE_SOCKET_PATH` environment variable; otherwise defaults to `"./node.socket"`.
+
+:::warning a node socket is necessary
+
+if no socket path is found at the path used (either explicit or default), `mutexo-server` cannot work.
+
+:::
+
+## `port`
+
+In the [cli](./cli): `-p` or `--port`.
+
+defaults to `3001`.
+
+port to be used by the server to listen for connecting clients.
+
+## `addrs`
+
+In the [cli](./cli): `-a` or `--addr` (can be specified many times).
+
+:::info `--addr` does NOT overwrite
+
+unlike other cli options, the `addrs` field in the configuration is not overwritten by the cli.
+
+instead if one or more `--addr` options are used in the cli, the specified values will be appended to the configuration array.
+
+:::
+
+defaults to `[]` (empty array).
+
+It must be an array of shelley cardano addresses in bech32 (see [CIP-19](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0019) for an in-depth description of cardano addresses).

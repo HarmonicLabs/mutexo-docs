@@ -1,0 +1,17 @@
+# `Filter`
+
+```ts
+import { Address, TxOutRef } from "@harmoniclabs/cardano-ledger-ts";
+
+type Filter
+    = IAddrFilter
+    | IUtxoFilter;
+
+interface IAddrFilter {
+    addr: Address | string;
+}
+
+interface IUtxoFilter {
+    utxoRef: TxOutRef | `${string}#${number}` | { id: string; index: number };
+}
+```

@@ -1,0 +1,125 @@
+---
+sidebar_position: 0
+title: sub
+---
+
+# `sub`
+
+The `sub` method primary purpose is to notify the server that we are interested to receive some events.
+
+## Signature
+
+```typescript
+async sub<EvtName extends MutexoClientEvtName>( eventName: EvtName, evtHandler?: ( msg: DataOf<EvtName> ) => void ): Promise<SubSuccess | SubFailure>
+async sub<EvtName extends MutexoClientEvtName>( eventName: EvtName, filters?: Filter[], evtHandler?: ( msg: DataOf<EvtName> ) => void ): Promise<SubSuccess | SubFailure>
+async sub<EvtName extends MutexoClientEvtName>(
+    eventName: EvtName,
+    filters?: Filter[] | (( msg: DataOf<EvtName> ) => void),
+    evtHandler?: ( msg: DataOf<EvtName> ) => void,
+): Promise<SubSuccess | SubFailure>
+```
+
+### Parameters
+
+#### Overload 1
+
+- `eventName`: [`MutexoClientEvtName`](../types/MutexoClientEvtName)
+- `evtHandler` (optional): an event listener to be added using [`addEventListener`](./addEventListener) only in case of success
+
+#### Overload 2
+
+- `eventName`: [`MutexoClientEvtName`](../types/MutexoClientEvtName)
+- `filters` (optional): [`Filter`](../types/Filter)[]
+- `evtHandler` (optional): an event listener to be added using [`addEventListener`](./addEventListener) only in case of success
+
+### Returns
+
+A promise that resolves to one of the following messages:
+- `SubSuccess`: Indicates that the subscription was successful.
+- `SubFailure`: Indicates that the subscription failed.
+
+## Description
+
+The `sub` method sends a subscription request to the server and waits for a response indicating whether the subscription was successful or not.
+
+The method throws an error if the message sent to the server was ill formed, but not if the subscription was well formed and fails.
+
+Insted if the subscription fails; the result will be instance of either `SubFailure`.
+
+If the subscription is successful, a `SubSuccess` is returned.
+
+After a succesful subscription, the client will emit events corresponding to the [`MutexoClientEvtName`](../types/MutexoClientEvtName) specified, using [`dispatchEvent`](./dispatchEvent).
+
+To handle the events emitted you need to add an event listener for the event you subscribed to.
+
+You can do so either by calling [`addEventListener`](./addEventListener) directly, or by passing the `evtHandler` parameter (that will call [`addEventListener`](./addEventListener) for you **only in case of success**)
+
+:::warning event listeners do not account for filters
+
+event listeners passed either as `evtHandler` or added using [`addEventListener`](./addEventListener)
+will be called for every event triggered for the client.
+
+this means that if you subscribe two times with different filters,
+both the event listener will be called every time,
+regardless of the filters sent with the subscription.
+
+You can check if an event received satisfies the filters by calling the [`satisfiesFilters`](../event_methods/satisfiesFilters)
+method present on the event message, as shown in the [second example below](#only-input-events-of-a-single-address).
+
+:::
+
+## Examples
+
+### All `"input"` events
+
+```ts
+const client = new MutexoClient(webSocket);
+
+const utxoSpentHandler = _evt => {
+    console.log("someone spent something")
+};
+
+// no filters specified
+// the client will receive ALL events
+// about ALL addresses followed by the server
+client.addEventListener("input", utxoSpentHandler);
+
+const subResult = await client.sub("input");
+
+if(!( subResult instanceof SubSuccess ))
+{
+    console.log("subscription was not successful, event listener was not added");
+}
+```
+
+### Only `"input"` events of a single address
+
+```ts
+const client = new MutexoClient(webSocket);
+
+const myFavoriteAddress = "addr1...";
+// only receive notifications
+// about inputs spent by myFavoriteAddress
+const filters = [
+    { addr: myFavoriteAddress }
+];
+
+const utxoSpentHandler = evt => {
+    // the handler is still called for every event triggered for the client
+    // if you have mutliple subscriptsion, the filters will accumulate
+    if( !evt.satisfiesFilters( filters ) ) return;
+
+    console.log("my favorite address spent something")
+};
+
+const subResult = await client.sub(
+    "input",
+    filters,
+    utxoSpentHandler
+);
+
+if(!( subResult instanceof SubSuccess ))
+{
+    console.log("subscription was not successful, event listener was not added");
+}
+```
