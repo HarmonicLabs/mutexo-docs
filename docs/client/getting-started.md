@@ -32,11 +32,13 @@ you will need to provide the http url where the server is running;
 `getWsUrl` will fetch an unique auth token and construct a valid link to pass to the [standard 
 `WebSocket` class](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket).
 
-### easiest way to construct a `MutexoClient`
+#### usage
 
 using `getWsUrl` the simplest way to get a client is:
 
 ```ts
+import { MutexoClient } from "@harmoniclabs/mutexo-client";
+
 const myMutexoServerUrl = "http://my-mutexo-sever.io:3001";
 
 const mutexo = new MutexoClient(
@@ -46,11 +48,14 @@ const mutexo = new MutexoClient(
 );
 ```
 
-notice that `getWsUrl` is `async` so you will need to use `await` when you call it.
-
 ## Using the client
 
-have a look at the [API](../category/api) section to see what the client can do for you.
+`MutexoClient` is a class that handles the events emitted by the [`mutexo-server`](../server/getting-started).
+
+To do so it exposes an [API](./api/) that allow you to [subscribe](./api/sub) (or [unsubscribe](./api/unsub)) to events of your interest
+and to handle them using callbacks (that you can add and remove using
+the [`addEventListener`](./api/addEventListener) and [`removeEventListener`](./api/removeEventListener) methods)
+
 
 ## Closing the Client
 

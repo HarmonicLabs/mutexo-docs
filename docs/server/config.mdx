@@ -9,15 +9,94 @@ The interface expected in the json file used as configuration is the following:
 
 ```ts
 interface MutexoServerConfig {
-    ignoreEnv: boolean;
     network: "mainet" | "preview" | "preprod" | number;
+    threads: string;
+    logLevel: "debug" | "info" | "warn" | "error" | "none";
     nodeSocketPath: string;
+    httpPort: number;
+    wsPorts: number[];
     addrs: string[];
-    port: number;
+    ignoreEnv: boolean;
+    disableLogColors: boolean;
 }
 ```
 
-each of which can be specified (and overwritten) directly by the [cli](./cli).
+each of which can be specified (and overwritten if the value is not an array) directly by the [cli](./cli).
+
+## `network`
+
+In the [cli](./cli): `-n` or `--network`.
+
+defaults to `"mainnet"`;
+
+it can be either the strings `"mainnet"`, `"preview"`, `"preprod"` or a `number` to be used as network magic (usually devnets and private testnets).
+
+## `threads`
+
+In the [cli](./cli): `-t` or `--threads`.
+
+defaults to `"50%"`.
+
+it can be either a `string` representing a percentage or a `number` explicitly setting the number of threads to be used
+(min 2, max [`os.availableParallelism()`](https://nodejs.org/api/os.html#osavailableparallelism)).
+
+## `logLevel`
+
+In the [cli](./cli): `-l` or `--log-level`.
+
+defaults to `"info"`.
+
+it can be one of the following strings: `"debug"`, `"info"`, `"warn"`, `"error"`, `"none"`.
+
+sets the minimum severity level of logs to be printed.
+
+## `nodeSocketPath`
+
+In the [cli](./cli): `-s` or `--node-socket-path`.
+
+If `ignoreEnv` is set to `false` (default), the default value of `nodeSocketPath` will be the `CARDANO_NODE_SOCKET_PATH` environment variable; otherwise defaults to `"./node.socket"`.
+
+:::warning a node socket is necessary
+
+if no socket path is found at the path used (either explicit or default), `mutexo-server` cannot work.
+
+:::
+
+## `httpPort`
+
+In the [cli](./cli): `-hp` or `--http-port`.
+
+defaults to `3001`.
+
+port to be used by the http server to listen for requests (`/wsAuth` path).
+
+## `wsPorts`
+
+In the [cli](./cli): `-ws` or `--ws-port` (can be specified many times).
+
+defaults to `[]` (empty array).
+
+Array of ports to be used by the web socket server to listen for connections.
+
+`config.threads - 1` web socket servers will be started, each listening on a different port.
+
+if not enough ports are specified, random (aviable) ports will be used.
+
+## `addrs`
+
+In the [cli](./cli): `-a` or `--addr` (can be specified many times).
+
+:::info `--addr` does NOT overwrite
+
+unlike other cli options, the `addrs` field in the configuration is not overwritten by the cli.
+
+instead if one or more `--addr` options are used in the cli, the specified values will be appended to the configuration array.
+
+:::
+
+defaults to `[]` (empty array).
+
+It must be an array of shelley cardano addresses in bech32 (see [CIP-19](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0019) for an in-depth description of cardano addresses).
 
 ## `ignoreEnv`
 
@@ -35,46 +114,10 @@ if you use `--ignore-env`, make sure to specify a `--node-socket-path`.
 
 :::
 
-## `network`
+## `disableLogColors`
 
-In the [cli](./cli): `-n` or `--network`.
+In the [cli](./cli): `--disable-log-colors`.
 
-defaults to `"mainnet"`;
+defaults to `false`.
 
-it can be either the strings `"mainnet"`, `"preview"` or `"preprod"`, or else a `number` to be used as network magic (usually devnets and private testnets) can be specified.
-
-## `nodeSocketPath`
-
-In the [cli](./cli): `-s` or `--node-socket-path`.
-
-If `ignoreEnv` is set to `false` (default), the default value of `nodeSocketPath` will be the `CARDANO_NODE_SOCKET_PATH` environment variable; otherwise defaults to `"./node.socket"`.
-
-:::warning a node socket is necessary
-
-if no socket path is found at the path used (either explicit or default), `mutexo-server` cannot work.
-
-:::
-
-## `port`
-
-In the [cli](./cli): `-p` or `--port`.
-
-defaults to `3001`.
-
-port to be used by the server to listen for connecting clients.
-
-## `addrs`
-
-In the [cli](./cli): `-a` or `--addr` (can be specified many times).
-
-:::info `--addr` does NOT overwrite
-
-unlike other cli options, the `addrs` field in the configuration is not overwritten by the cli.
-
-instead if one or more `--addr` options are used in the cli, the specified values will be appended to the configuration array.
-
-:::
-
-defaults to `[]` (empty array).
-
-It must be an array of shelley cardano addresses in bech32 (see [CIP-19](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0019) for an in-depth description of cardano addresses).
+if set to `true`, the log output will not have colors.

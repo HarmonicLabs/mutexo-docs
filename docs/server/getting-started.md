@@ -6,8 +6,19 @@ sidebar_position: 0
 
 ## Installation
 
-```
+```bash
 npm install -g @harmoniclabs/mutexo-server
+```
+
+if the installation was successfull you should be able to run
+
+```bash
+mutexo-server --version
+```
+
+which should output something like this
+```
+0.2.0
 ```
 
 ## Cardano node
@@ -31,8 +42,7 @@ First create a fresh directory if you don't have already one to work in
 ```shell
 mkdir tmp-cardano
 cd tmp-cardano
-```
-
+```synced
 #### installation
 
 If you don't already have one, install the `cardano-node` binaries from the [official github repository](https://github.com/IntersectMBO/cardano-node/releases/)
@@ -101,3 +111,24 @@ cardano-node run \
 ### `cardano-node` docs
 
 more info on how to run a node [here](https://developers.cardano.org/docs/get-started/cardano-node/running-cardano/).
+
+
+## run
+
+once you have installed `mutexo-server` and your cardano-node is synchronized you can simply run
+
+```bash
+mutexo-server start
+```
+
+which will run the mutxo server with the default configuration, using the environment variable `CARDANO_NODE_SOCKET_PATH` as path for the cardano-node socket.
+
+you can pass more arguments to the command to fine tune the server, as an example you can explicitly pass the path where the socket for the cardano-node can be found
+
+```bash
+mutexo-server start --node-socket-path path/to/node.socket
+```
+
+so that you don`t have to rely on the environment.
+
+for more infos on the options have a look at the [cli section](./cli).

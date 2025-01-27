@@ -1,77 +1,116 @@
 ---
-sidebar_position: 9
+sidebar_position: 3
 title: lock
 ---
 
-# Lock
+# `lock`
 
-The `lock` method in the `MutexoClient` class is used to lock a specified number of UTXOs (Unspent Transaction Outputs). This method is asynchronous and returns a promise that resolves to either a `MessageMutexSuccess`, `MessageMutexFailure`, or `MessageError` object.
+The `lock` method signals the intent to lock one or more UTXOs to the server.
 
-### Method Signature
+The server emits a `"lock"` event if the lock was succesful, to notify the other clients interested that your utxo was locked.
 
-```typescript
+## Signature
+
+```ts
 async lock(
-    utxoRefs: CanBeTxOutRef[],
-    required: number = 1
-): Promise<MessageMutexSuccess | MessageMutexFailure | MessageError>
+    utxoRefs: (ITxOutRef | `${string}#${number}`)[],
+    required?: number
+): Promise<MutexSuccess | MutexFailure>
 ```
 
 ### Parameters
 
-- **utxoRefs**: `CanBeTxOutRef[]`
-  - An array of UTXO references that need to be locked. Each reference can be of a type that can be converted to a `TxOutRef`.
+- `utxoRefs`: (`ITxOutRef` | `string`)[] - An array of UTXO references to be locked.
+- `required` (optional): `number` - The number of UTXOs required to be locked. Defaults to 1.
 
-- **required**: `number` (optional, default = 1)
-  - The number of UTXOs required to be locked. This must be a positive integer. If not provided, it defaults to 1.
+### Returns
 
-### Return Value
+A promise that resolves to one of the following messages:
+- [`MutexSuccess`](../../messages/classes/MutexSuccess): Indicates that the lock was successful.
+- [`MutexFailure`](../../messages/classes/MutexFailure): Indicates that the lock failed.
 
-The method returns a promise that resolves to one of the following types:
+## Description
 
-- **MessageMutexSuccess**
-  - Indicates that the UTXOs were successfully locked.
-  
-- **MessageMutexFailure**
-  - Indicates that the UTXOs could not be locked.
-  
-- **MessageError**
-  - Indicates that an error occurred during the locking process.
+The `lock` method sends a lock request to the server and waits for a response indicating whether the lock was successful or not.
 
-### Usage Example
+After a successful lock, the client will emit a "lock" event.
 
-```typescript
+The method throws an error if the message sent to the server was ill-formed, but not if the lock request was well-formed and fails.
+
+Instead, if the lock request fails, the result will be an instance of `MutexFailure`.
+
+If the lock request is successful, a `MutexSuccess` is returned.
+
+## Examples
+
+### lock any of a set of utxos
+
+```ts
+const client = new MutexoClient(webSocket);
+
+const anyOfTheseWorks = [
+    { id: "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff", index: 0 },
+    "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff#2",
+    "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff#5",
+];
+
+// locks only 1 utxo
+const lockResult = await client.lock( anyOfTheseWorks );
+
+if (lockResult instanceof MutexSuccess) {
+    console.log(
+        "the following utxos were locked",
+        lockResult.utxoRefs.map( ref => ref.toString() )
+    );
+} else {
+    console.log("Failed to lock UTXO");
+}
+```
+
+### Lock N of M utxos
+
+```ts
 const client = new MutexoClient(webSocket);
 
 const utxoRefs = [
-    // Add UTXO references here
+    { id: "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff", index: 0 },
+    "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff#2",
+    "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff#5",
 ];
 
-client.lock(utxoRefs, 2)
-    .then(response => {
-        if (response instanceof MessageMutexSuccess) {
-            console.log("UTXOs locked successfully:", response);
-        } else if (response instanceof MessageMutexFailure) {
-            console.log("Failed to lock UTXOs:", response);
-        }
-    })
-    .catch(error => {
-        console.error("Error locking UTXOs:", error);
-    });
+// locks 2 out of 3 utxos
+const lockResult = await client.lock(utxoRefs, 2);
+
+if (lockResult instanceof MutexSuccess) {
+    console.log(
+        "the following utxos were locked",
+        lockResult.utxoRefs.map( ref => ref.toString() )
+    );
+} else {
+    console.log("Failed to lock UTXO");
+}
 ```
 
-### Detailed Description
+### Lock all the utxos or fail
 
-1. **Initialization**: The method starts by generating a unique ID for the lock request and waits for the WebSocket connection to be ready.
+```ts
+const client = new MutexoClient(webSocket);
 
-2. **Validation**: It validates the `required` parameter to ensure it is a positive integer. If not, it defaults to 1.
+const utxoRefs = [
+    { id: "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff", index: 0 },
+    "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff#2",
+    "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff#5",
+];
 
-3. **Event Listeners**: The method sets up event listeners for `mtxSuccess`, `mtxFailure`, and `error` events. These listeners handle the respective responses and resolve or reject the promise accordingly.
+// locks all 3, or fail
+const lockResult = await client.lock(utxoRefs, utxoRefs.length);
 
-4. **Sending Request**: The method sends a `ClientReqLock` message over the WebSocket connection with the generated ID, the UTXO references, and the required number of locks.
-
-5. **Handling Responses**: The event listeners handle the responses:
-   - On `mtxSuccess`, the promise is resolved with a `MessageMutexSuccess` object.
-   - On `mtxFailure`, the promise is resolved with a `MessageMutexFailure` object.
-   - On `error`, the promise is rejected with an error message.
-
-This method is crucial for ensuring that specific UTXOs are locked and cannot be used in other transactions until they are explicitly freed, providing a mechanism for managing UTXO state in a concurrent environment.
+if (lockResult instanceof MutexSuccess) {
+    console.log(
+        "the following utxos were locked",
+        lockResult.utxoRefs.map( ref => ref.toString() )
+    );
+} else {
+    console.log("Failed to lock UTXO");
+}
+```

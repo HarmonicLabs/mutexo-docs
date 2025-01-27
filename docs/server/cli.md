@@ -47,12 +47,15 @@ Starts the mutexo server
 
 Options:
   -c, --config <string>            path to the json configuration file (default: "./mutexo-config.json")
-  -n, --network <string>           specify the network to use, either mainnet | preview | preprod; otherwise the network magic
-                                   number (default: "mainnet")
-  -E, --ignore-env                 explicitly ignores the .env file (default: false)
-  -a, --addr <string>              cardano address to be monitored, can be specified multiple times
+  -n, --network <string>           specify the network to use, either mainnet | preview | preprod; otherwise the network magic number (default: "mainnet")
+  -a, --addr <string...>           cardano address to be monitored, can be specified multiple times (default: [])
+  -l, --log-level <string>         either "debug" | "info" | "warn" | "error" | "none" (default: "info")
+  -t, --threads <string>           percentage or number of threads to use; if percentage, the number will be calculated based on the number of cores; minimum 2 threads (chain-sync and ws-server) (default: "50%")
   -s, --node-socket-path <string>  path to the cardano-node socket
-  -p, --port <number>              port for the WebSocket server to listen to (default: "3001")
+  -hp, --http-port <number>        port of the http server (main thread) (default: "3001")
+  -ws, --ws-port <number...>       port(s) of the web socket server(s); if not enough ports are specified, random (aviable) ports will be used
+  --ignore-env                     explicitly ignores the .env file (default: false)
+  --disable-log-colors             disables colors in the log output (default: false)
   -h, --help                       display help for command
 ```
 

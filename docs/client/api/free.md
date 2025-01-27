@@ -1,11 +1,11 @@
 ---
-sidebar_position: 10
+sidebar_position: 4
 title: free
 ---
 
 # Free
 
-The `free` method is used to release previously locked UTXOs (Unspent Transaction Outputs). This method sends a request to the server to free the specified UTXOs.
+The `free` method is used to release previously locked UTxOs. This method sends a request to the server to free the specified UTXOs.
 
 ### Syntax
 
