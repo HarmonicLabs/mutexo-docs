@@ -9,10 +9,12 @@ The `dispatchEvent` method emits a specific event, calling all registered listen
 
 ## Signature
 
+```ts
 async dispatchEvent<EvtName extends MutexoEventName>(
     evt: EvtName,
     msg: DataOf<EvtName>
 ): boolean
+```
 
 ### Parameters
 
@@ -33,6 +35,7 @@ This method is also available as `emit`.
 
 ### Emit an "input" event
 
+```ts
 const client = new MutexoClient(webSocket);
 
 const utxoSpentHandler = _evt => {
@@ -41,5 +44,10 @@ const utxoSpentHandler = _evt => {
 
 client.addEventListener("input", utxoSpentHandler);
 
-// Emit the "input" event
-client.dispatchEvent("input", { /* event data */ });
+// Emit an "input" event
+
+client.dispatchEvent(
+    "input",
+    new MutexoInput({})
+);
+```
