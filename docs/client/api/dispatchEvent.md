@@ -7,6 +7,16 @@ title: dispatchEvent
 
 The `dispatchEvent` method emits a specific event, calling all registered listeners for that event.
 
+This method is also available as `emit`.
+
+:::info events emitted are only local
+
+`dispatchEvent` (or `emit`) only emit the event to the same client that called it.
+
+**It DOES NOT emit an event to all other clients**
+
+:::
+
 ## Signature
 
 ```ts
@@ -25,11 +35,6 @@ async dispatchEvent<EvtName extends MutexoEventName>(
 
 - `boolean`: `true` if the event had listeners, `false` otherwise.
 
-## Description
-
-The `dispatchEvent` method emits a specific event, calling all registered listeners for that event.
-
-This method is also available as `emit`.
 
 ## Examples
 

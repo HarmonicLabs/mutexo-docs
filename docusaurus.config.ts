@@ -123,7 +123,7 @@ const config: Config = {
                     ]
                 },
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} Harmonic Laboratories Srl.`,
+            copyright: `Copyright © ${new Date().getFullYear()} Harmonic Laboratories LTD.`,
         },
         prism: {
             theme: prismThemes.github,

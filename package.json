@@ -6,6 +6,8 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "build-cp": "npm run build && cp -r ./build/* ",
+    "cp-to-build": "npm run build-cp ../../mutexo-docs-build-vercel",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
