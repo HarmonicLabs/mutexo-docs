@@ -12,14 +12,14 @@ Defined in: [messages/MessageSubFailure.ts:24](https://github.com/HarmonicLabs/m
 
 - `ToCbor`
 - `ToCborObj`
-- [`ISubFailure`](../interfaces/ISubFailure.md)
+- [`ISubFailure`](../interfaces/ISubFailure)
 - `ISatisfiesFilter`
 
 ## Constructors
 
 ### new SubFailure()
 
-> **new SubFailure**(`stuff`): [`SubFailure`](SubFailure.md)
+> **new SubFailure**(`stuff`): [`SubFailure`](SubFailure)
 
 Defined in: [messages/MessageSubFailure.ts:34](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageSubFailure.ts#L34)
 
@@ -27,11 +27,11 @@ Defined in: [messages/MessageSubFailure.ts:34](https://github.com/HarmonicLabs/m
 
 ##### stuff
 
-[`ISubFailure`](../interfaces/ISubFailure.md)
+[`ISubFailure`](../interfaces/ISubFailure)
 
 #### Returns
 
-[`SubFailure`](SubFailure.md)
+[`SubFailure`](SubFailure)
 
 ## Properties
 
@@ -43,7 +43,7 @@ Defined in: [messages/MessageSubFailure.ts:27](https://github.com/HarmonicLabs/m
 
 #### Implementation of
 
-[`ISubFailure`](../interfaces/ISubFailure.md).[`errorCode`](../interfaces/ISubFailure.md#errorcode)
+[`ISubFailure`](../interfaces/ISubFailure).[`errorCode`](../interfaces/ISubFailure.md#errorcode)
 
 ***
 
@@ -55,7 +55,7 @@ Defined in: [messages/MessageSubFailure.ts:26](https://github.com/HarmonicLabs/m
 
 #### Implementation of
 
-[`ISubFailure`](../interfaces/ISubFailure.md).[`id`](../interfaces/ISubFailure.md#id)
+[`ISubFailure`](../interfaces/ISubFailure).[`id`](../interfaces/ISubFailure.md#id)
 
 ## Accessors
 
@@ -83,7 +83,7 @@ Defined in: [messages/MessageSubFailure.ts:43](https://github.com/HarmonicLabs/m
 
 ##### filter
 
-[`IFilter`](../type-aliases/IFilter.md)
+[`IFilter`](../type-aliases/IFilter)
 
 #### Returns
 
@@ -105,7 +105,7 @@ Defined in: [messages/MessageSubFailure.ts:42](https://github.com/HarmonicLabs/m
 
 ##### filters
 
-[`IFilter`](../type-aliases/IFilter.md)[]
+[`IFilter`](../type-aliases/IFilter)[]
 
 #### Returns
 
@@ -163,7 +163,7 @@ Defined in: [messages/MessageSubFailure.ts:53](https://github.com/HarmonicLabs/m
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`SubFailure`](SubFailure.md)
+> `static` **fromCbor**(`cbor`): [`SubFailure`](SubFailure)
 
 Defined in: [messages/MessageSubFailure.ts:64](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageSubFailure.ts#L64)
 
@@ -175,13 +175,13 @@ Defined in: [messages/MessageSubFailure.ts:64](https://github.com/HarmonicLabs/m
 
 #### Returns
 
-[`SubFailure`](SubFailure.md)
+[`SubFailure`](SubFailure)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`SubFailure`](SubFailure.md)
+> `static` **fromCborObj**(`cbor`): [`SubFailure`](SubFailure)
 
 Defined in: [messages/MessageSubFailure.ts:69](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageSubFailure.ts#L69)
 
@@ -193,4 +193,4 @@ Defined in: [messages/MessageSubFailure.ts:69](https://github.com/HarmonicLabs/m
 
 #### Returns
 
-[`SubFailure`](SubFailure.md)
+[`SubFailure`](SubFailure)

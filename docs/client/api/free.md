@@ -61,6 +61,6 @@ The `free` method may trigger the following events:
 
 ### See Also
 
-- [`lock` Method](./lock.md)
-- [`sub` Method](./sub.md)
-- [`unsub` Method](./unsub.md)
+- [`lock` Method](./lock)
+- [`sub` Method](./sub)
+- [`unsub` Method](./unsub)

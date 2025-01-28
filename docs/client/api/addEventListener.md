@@ -21,7 +21,7 @@ async addEventListener<Evt extends MutexoEventName>(
 
 - `evt`: [`MutexoEventName`](../../messages/type-aliases/MutexoEventName) - The name of the event to listen for.
 - `callback`: (data: [`DataOf<Evt>`](../../messages/type-aliases/DataOf)) => void - The function to call when the event is emitted.
-- `opts` (optional): [`AddEventListenerOptions`](../../messages/type-aliases/AddEventListenerOptions) - Options for the event listener.
+- `opts` (optional): `AddEventListenerOptions` - Options for the event listener.
 
 ### Returns
 

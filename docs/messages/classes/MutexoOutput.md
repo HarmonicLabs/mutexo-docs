@@ -12,14 +12,14 @@ Defined in: [messages/MessageOutput.ts:22](https://github.com/HarmonicLabs/mutex
 
 - `ToCbor`
 - `ToCborObj`
-- [`IMutexoOutput`](../interfaces/IMutexoOutput.md)
+- [`IMutexoOutput`](../interfaces/IMutexoOutput)
 - `ISatisfiesFilter`
 
 ## Constructors
 
 ### new MutexoOutput()
 
-> **new MutexoOutput**(`stuff`): [`MutexoOutput`](MutexoOutput.md)
+> **new MutexoOutput**(`stuff`): [`MutexoOutput`](MutexoOutput)
 
 Defined in: [messages/MessageOutput.ts:28](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageOutput.ts#L28)
 
@@ -27,11 +27,11 @@ Defined in: [messages/MessageOutput.ts:28](https://github.com/HarmonicLabs/mutex
 
 ##### stuff
 
-[`IMutexoOutput`](../interfaces/IMutexoOutput.md)
+[`IMutexoOutput`](../interfaces/IMutexoOutput)
 
 #### Returns
 
-[`MutexoOutput`](MutexoOutput.md)
+[`MutexoOutput`](MutexoOutput)
 
 ## Properties
 
@@ -43,7 +43,7 @@ Defined in: [messages/MessageOutput.ts:26](https://github.com/HarmonicLabs/mutex
 
 #### Implementation of
 
-[`IMutexoOutput`](../interfaces/IMutexoOutput.md).[`addr`](../interfaces/IMutexoOutput.md#addr)
+[`IMutexoOutput`](../interfaces/IMutexoOutput).[`addr`](../interfaces/IMutexoOutput.md#addr)
 
 ***
 
@@ -55,7 +55,7 @@ Defined in: [messages/MessageOutput.ts:25](https://github.com/HarmonicLabs/mutex
 
 #### Implementation of
 
-[`IMutexoOutput`](../interfaces/IMutexoOutput.md).[`utxoRef`](../interfaces/IMutexoOutput.md#utxoref)
+[`IMutexoOutput`](../interfaces/IMutexoOutput).[`utxoRef`](../interfaces/IMutexoOutput.md#utxoref)
 
 ## Methods
 
@@ -69,7 +69,7 @@ Defined in: [messages/MessageOutput.ts:39](https://github.com/HarmonicLabs/mutex
 
 ##### filter
 
-[`IFilter`](../type-aliases/IFilter.md)
+[`IFilter`](../type-aliases/IFilter)
 
 #### Returns
 
@@ -91,7 +91,7 @@ Defined in: [messages/MessageOutput.ts:35](https://github.com/HarmonicLabs/mutex
 
 ##### filters
 
-[`IFilter`](../type-aliases/IFilter.md)[]
+[`IFilter`](../type-aliases/IFilter)[]
 
 #### Returns
 
@@ -149,7 +149,7 @@ Defined in: [messages/MessageOutput.ts:56](https://github.com/HarmonicLabs/mutex
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`MutexoOutput`](MutexoOutput.md)
+> `static` **fromCbor**(`cbor`): [`MutexoOutput`](MutexoOutput)
 
 Defined in: [messages/MessageOutput.ts:70](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageOutput.ts#L70)
 
@@ -161,13 +161,13 @@ Defined in: [messages/MessageOutput.ts:70](https://github.com/HarmonicLabs/mutex
 
 #### Returns
 
-[`MutexoOutput`](MutexoOutput.md)
+[`MutexoOutput`](MutexoOutput)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`MutexoOutput`](MutexoOutput.md)
+> `static` **fromCborObj**(`cbor`): [`MutexoOutput`](MutexoOutput)
 
 Defined in: [messages/MessageOutput.ts:75](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageOutput.ts#L75)
 
@@ -179,4 +179,4 @@ Defined in: [messages/MessageOutput.ts:75](https://github.com/HarmonicLabs/mutex
 
 #### Returns
 
-[`MutexoOutput`](MutexoOutput.md)
+[`MutexoOutput`](MutexoOutput)

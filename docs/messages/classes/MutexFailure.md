@@ -12,14 +12,14 @@ Defined in: [messages/MessageMutexFailure.ts:29](https://github.com/HarmonicLabs
 
 - `ToCbor`
 - `ToCborObj`
-- [`IMutexFailure`](../interfaces/IMutexFailure.md)
+- [`IMutexFailure`](../interfaces/IMutexFailure)
 - `ISatisfiesFilter`
 
 ## Constructors
 
 ### new MutexFailure()
 
-> **new MutexFailure**(`stuff`): [`MutexFailure`](MutexFailure.md)
+> **new MutexFailure**(`stuff`): [`MutexFailure`](MutexFailure)
 
 Defined in: [messages/MessageMutexFailure.ts:36](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageMutexFailure.ts#L36)
 
@@ -27,11 +27,11 @@ Defined in: [messages/MessageMutexFailure.ts:36](https://github.com/HarmonicLabs
 
 ##### stuff
 
-[`IMutexFailure`](../interfaces/IMutexFailure.md)
+[`IMutexFailure`](../interfaces/IMutexFailure)
 
 #### Returns
 
-[`MutexFailure`](MutexFailure.md)
+[`MutexFailure`](MutexFailure)
 
 ## Properties
 
@@ -43,19 +43,19 @@ Defined in: [messages/MessageMutexFailure.ts:32](https://github.com/HarmonicLabs
 
 #### Implementation of
 
-[`IMutexFailure`](../interfaces/IMutexFailure.md).[`id`](../interfaces/IMutexFailure.md#id)
+[`IMutexFailure`](../interfaces/IMutexFailure).[`id`](../interfaces/IMutexFailure.md#id)
 
 ***
 
 ### mutexOp
 
-> `readonly` **mutexOp**: [`MutexOp`](../enumerations/MutexOp.md)
+> `readonly` **mutexOp**: [`MutexOp`](../enumerations/MutexOp)
 
 Defined in: [messages/MessageMutexFailure.ts:33](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageMutexFailure.ts#L33)
 
 #### Implementation of
 
-[`IMutexFailure`](../interfaces/IMutexFailure.md).[`mutexOp`](../interfaces/IMutexFailure.md#mutexop)
+[`IMutexFailure`](../interfaces/IMutexFailure).[`mutexOp`](../interfaces/IMutexFailure.md#mutexop)
 
 ***
 
@@ -67,7 +67,7 @@ Defined in: [messages/MessageMutexFailure.ts:34](https://github.com/HarmonicLabs
 
 #### Implementation of
 
-[`IMutexFailure`](../interfaces/IMutexFailure.md).[`utxoRefs`](../interfaces/IMutexFailure.md#utxorefs)
+[`IMutexFailure`](../interfaces/IMutexFailure).[`utxoRefs`](../interfaces/IMutexFailure.md#utxorefs)
 
 ## Methods
 
@@ -81,7 +81,7 @@ Defined in: [messages/MessageMutexFailure.ts:46](https://github.com/HarmonicLabs
 
 ##### filter
 
-[`IFilter`](../type-aliases/IFilter.md)
+[`IFilter`](../type-aliases/IFilter)
 
 #### Returns
 
@@ -103,7 +103,7 @@ Defined in: [messages/MessageMutexFailure.ts:45](https://github.com/HarmonicLabs
 
 ##### filters
 
-[`IFilter`](../type-aliases/IFilter.md)[]
+[`IFilter`](../type-aliases/IFilter)[]
 
 #### Returns
 
@@ -161,7 +161,7 @@ Defined in: [messages/MessageMutexFailure.ts:53](https://github.com/HarmonicLabs
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`MutexFailure`](MutexFailure.md)
+> `static` **fromCbor**(`cbor`): [`MutexFailure`](MutexFailure)
 
 Defined in: [messages/MessageMutexFailure.ts:69](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageMutexFailure.ts#L69)
 
@@ -173,13 +173,13 @@ Defined in: [messages/MessageMutexFailure.ts:69](https://github.com/HarmonicLabs
 
 #### Returns
 
-[`MutexFailure`](MutexFailure.md)
+[`MutexFailure`](MutexFailure)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`MutexFailure`](MutexFailure.md)
+> `static` **fromCborObj**(`cbor`): [`MutexFailure`](MutexFailure)
 
 Defined in: [messages/MessageMutexFailure.ts:75](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageMutexFailure.ts#L75)
 
@@ -191,4 +191,4 @@ Defined in: [messages/MessageMutexFailure.ts:75](https://github.com/HarmonicLabs
 
 #### Returns
 
-[`MutexFailure`](MutexFailure.md)
+[`MutexFailure`](MutexFailure)

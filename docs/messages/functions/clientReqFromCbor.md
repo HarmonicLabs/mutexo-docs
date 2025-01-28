@@ -6,7 +6,7 @@
 
 # Function: clientReqFromCbor()
 
-> **clientReqFromCbor**(`cbor`): [`ClientReq`](../type-aliases/ClientReq.md)
+> **clientReqFromCbor**(`cbor`): [`ClientReq`](../type-aliases/ClientReq)
 
 Defined in: [ClientReq.ts:37](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/ClientReq.ts#L37)
 
@@ -18,4 +18,4 @@ Defined in: [ClientReq.ts:37](https://github.com/HarmonicLabs/mutexo-messages/bl
 
 ## Returns
 
-[`ClientReq`](../type-aliases/ClientReq.md)
+[`ClientReq`](../type-aliases/ClientReq)

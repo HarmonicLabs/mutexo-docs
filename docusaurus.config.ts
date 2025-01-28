@@ -97,23 +97,6 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
-                    title: 'Docs',
-                    items: [
-                        {
-                            label: 'Introduction',
-                            to: '/',
-                        },
-                        {
-                            label: 'mutexo-server',
-                            to: '/mutexo-server',
-                        },
-                        {
-                            label: 'mutexo-client',
-                            to: '/mutexo-client',
-                        }
-                    ]
-                },
-                {
                     title: 'Community',
                     items: [
                         {

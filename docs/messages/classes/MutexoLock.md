@@ -12,14 +12,14 @@ Defined in: [messages/MessageLock.ts:24](https://github.com/HarmonicLabs/mutexo-
 
 - `ToCbor`
 - `ToCborObj`
-- [`IMutexoLock`](../interfaces/IMutexoLock.md)
+- [`IMutexoLock`](../interfaces/IMutexoLock)
 - `ISatisfiesFilter`
 
 ## Constructors
 
 ### new MutexoLock()
 
-> **new MutexoLock**(`stuff`): [`MutexoLock`](MutexoLock.md)
+> **new MutexoLock**(`stuff`): [`MutexoLock`](MutexoLock)
 
 Defined in: [messages/MessageLock.ts:30](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageLock.ts#L30)
 
@@ -27,11 +27,11 @@ Defined in: [messages/MessageLock.ts:30](https://github.com/HarmonicLabs/mutexo-
 
 ##### stuff
 
-[`IMutexoLock`](../interfaces/IMutexoLock.md)
+[`IMutexoLock`](../interfaces/IMutexoLock)
 
 #### Returns
 
-[`MutexoLock`](MutexoLock.md)
+[`MutexoLock`](MutexoLock)
 
 ## Properties
 
@@ -43,7 +43,7 @@ Defined in: [messages/MessageLock.ts:28](https://github.com/HarmonicLabs/mutexo-
 
 #### Implementation of
 
-[`IMutexoLock`](../interfaces/IMutexoLock.md).[`addr`](../interfaces/IMutexoLock.md#addr)
+[`IMutexoLock`](../interfaces/IMutexoLock).[`addr`](../interfaces/IMutexoLock.md#addr)
 
 ***
 
@@ -55,7 +55,7 @@ Defined in: [messages/MessageLock.ts:27](https://github.com/HarmonicLabs/mutexo-
 
 #### Implementation of
 
-[`IMutexoLock`](../interfaces/IMutexoLock.md).[`utxoRef`](../interfaces/IMutexoLock.md#utxoref)
+[`IMutexoLock`](../interfaces/IMutexoLock).[`utxoRef`](../interfaces/IMutexoLock.md#utxoref)
 
 ## Methods
 
@@ -69,7 +69,7 @@ Defined in: [messages/MessageLock.ts:41](https://github.com/HarmonicLabs/mutexo-
 
 ##### filter
 
-[`IFilter`](../type-aliases/IFilter.md)
+[`IFilter`](../type-aliases/IFilter)
 
 #### Returns
 
@@ -91,7 +91,7 @@ Defined in: [messages/MessageLock.ts:37](https://github.com/HarmonicLabs/mutexo-
 
 ##### filters
 
-[`IFilter`](../type-aliases/IFilter.md)[]
+[`IFilter`](../type-aliases/IFilter)[]
 
 #### Returns
 
@@ -149,7 +149,7 @@ Defined in: [messages/MessageLock.ts:58](https://github.com/HarmonicLabs/mutexo-
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`MutexoLock`](MutexoLock.md)
+> `static` **fromCbor**(`cbor`): [`MutexoLock`](MutexoLock)
 
 Defined in: [messages/MessageLock.ts:72](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageLock.ts#L72)
 
@@ -161,13 +161,13 @@ Defined in: [messages/MessageLock.ts:72](https://github.com/HarmonicLabs/mutexo-
 
 #### Returns
 
-[`MutexoLock`](MutexoLock.md)
+[`MutexoLock`](MutexoLock)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`MutexoLock`](MutexoLock.md)
+> `static` **fromCborObj**(`cbor`): [`MutexoLock`](MutexoLock)
 
 Defined in: [messages/MessageLock.ts:77](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageLock.ts#L77)
 
@@ -179,4 +179,4 @@ Defined in: [messages/MessageLock.ts:77](https://github.com/HarmonicLabs/mutexo-
 
 #### Returns
 
-[`MutexoLock`](MutexoLock.md)
+[`MutexoLock`](MutexoLock)

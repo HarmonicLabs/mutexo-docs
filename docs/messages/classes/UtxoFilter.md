@@ -12,13 +12,13 @@ Defined in: [clientReqs/filters/UtxoFilter.ts:8](https://github.com/HarmonicLabs
 
 - `ToCbor`
 - `ToCborObj`
-- [`IUtxoFilter`](../interfaces/IUtxoFilter.md)
+- [`IUtxoFilter`](../interfaces/IUtxoFilter)
 
 ## Constructors
 
 ### new UtxoFilter()
 
-> **new UtxoFilter**(`__namedParameters`): [`UtxoFilter`](UtxoFilter.md)
+> **new UtxoFilter**(`__namedParameters`): [`UtxoFilter`](UtxoFilter)
 
 Defined in: [clientReqs/filters/UtxoFilter.ts:12](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/filters/UtxoFilter.ts#L12)
 
@@ -26,11 +26,11 @@ Defined in: [clientReqs/filters/UtxoFilter.ts:12](https://github.com/HarmonicLab
 
 ##### \_\_namedParameters
 
-[`IUtxoFilter`](../interfaces/IUtxoFilter.md)
+[`IUtxoFilter`](../interfaces/IUtxoFilter)
 
 #### Returns
 
-[`UtxoFilter`](UtxoFilter.md)
+[`UtxoFilter`](UtxoFilter)
 
 ## Properties
 
@@ -42,7 +42,7 @@ Defined in: [clientReqs/filters/UtxoFilter.ts:10](https://github.com/HarmonicLab
 
 #### Implementation of
 
-[`IUtxoFilter`](../interfaces/IUtxoFilter.md).[`utxoRef`](../interfaces/IUtxoFilter.md#utxoref)
+[`IUtxoFilter`](../interfaces/IUtxoFilter).[`utxoRef`](../interfaces/IUtxoFilter.md#utxoref)
 
 ## Methods
 
@@ -80,7 +80,7 @@ Defined in: [clientReqs/filters/UtxoFilter.ts:22](https://github.com/HarmonicLab
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`UtxoFilter`](UtxoFilter.md)
+> `static` **fromCbor**(`cbor`): [`UtxoFilter`](UtxoFilter)
 
 Defined in: [clientReqs/filters/UtxoFilter.ts:30](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/filters/UtxoFilter.ts#L30)
 
@@ -92,13 +92,13 @@ Defined in: [clientReqs/filters/UtxoFilter.ts:30](https://github.com/HarmonicLab
 
 #### Returns
 
-[`UtxoFilter`](UtxoFilter.md)
+[`UtxoFilter`](UtxoFilter)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`UtxoFilter`](UtxoFilter.md)
+> `static` **fromCborObj**(`cbor`): [`UtxoFilter`](UtxoFilter)
 
 Defined in: [clientReqs/filters/UtxoFilter.ts:36](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/filters/UtxoFilter.ts#L36)
 
@@ -110,4 +110,4 @@ Defined in: [clientReqs/filters/UtxoFilter.ts:36](https://github.com/HarmonicLab
 
 #### Returns
 
-[`UtxoFilter`](UtxoFilter.md)
+[`UtxoFilter`](UtxoFilter)

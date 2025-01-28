@@ -6,7 +6,7 @@
 
 # Function: mutexoEventNameToIndex()
 
-> **mutexoEventNameToIndex**(`evtName`): [`MutexoEventIndex`](../enumerations/MutexoEventIndex.md)
+> **mutexoEventNameToIndex**(`evtName`): [`MutexoEventIndex`](../enumerations/MutexoEventIndex)
 
 Defined in: [events/MutexoEventIndex.ts:59](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/events/MutexoEventIndex.ts#L59)
 
@@ -14,8 +14,8 @@ Defined in: [events/MutexoEventIndex.ts:59](https://github.com/HarmonicLabs/mute
 
 ### evtName
 
-keyof [`MutexoEventListeners`](../interfaces/MutexoEventListeners.md)
+keyof [`MutexoEventListeners`](../interfaces/MutexoEventListeners)
 
 ## Returns
 
-[`MutexoEventIndex`](../enumerations/MutexoEventIndex.md)
+[`MutexoEventIndex`](../enumerations/MutexoEventIndex)

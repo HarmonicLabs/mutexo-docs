@@ -12,14 +12,14 @@ Defined in: [messages/MessageFree.ts:23](https://github.com/HarmonicLabs/mutexo-
 
 - `ToCbor`
 - `ToCborObj`
-- [`IMutexoFree`](../interfaces/IMutexoFree.md)
+- [`IMutexoFree`](../interfaces/IMutexoFree)
 - `ISatisfiesFilter`
 
 ## Constructors
 
 ### new MutexoFree()
 
-> **new MutexoFree**(`stuff`): [`MutexoFree`](MutexoFree.md)
+> **new MutexoFree**(`stuff`): [`MutexoFree`](MutexoFree)
 
 Defined in: [messages/MessageFree.ts:29](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageFree.ts#L29)
 
@@ -27,11 +27,11 @@ Defined in: [messages/MessageFree.ts:29](https://github.com/HarmonicLabs/mutexo-
 
 ##### stuff
 
-[`IMutexoFree`](../interfaces/IMutexoFree.md)
+[`IMutexoFree`](../interfaces/IMutexoFree)
 
 #### Returns
 
-[`MutexoFree`](MutexoFree.md)
+[`MutexoFree`](MutexoFree)
 
 ## Properties
 
@@ -43,7 +43,7 @@ Defined in: [messages/MessageFree.ts:27](https://github.com/HarmonicLabs/mutexo-
 
 #### Implementation of
 
-[`IMutexoFree`](../interfaces/IMutexoFree.md).[`addr`](../interfaces/IMutexoFree.md#addr)
+[`IMutexoFree`](../interfaces/IMutexoFree).[`addr`](../interfaces/IMutexoFree.md#addr)
 
 ***
 
@@ -55,7 +55,7 @@ Defined in: [messages/MessageFree.ts:26](https://github.com/HarmonicLabs/mutexo-
 
 #### Implementation of
 
-[`IMutexoFree`](../interfaces/IMutexoFree.md).[`utxoRef`](../interfaces/IMutexoFree.md#utxoref)
+[`IMutexoFree`](../interfaces/IMutexoFree).[`utxoRef`](../interfaces/IMutexoFree.md#utxoref)
 
 ## Methods
 
@@ -69,7 +69,7 @@ Defined in: [messages/MessageFree.ts:40](https://github.com/HarmonicLabs/mutexo-
 
 ##### filter
 
-[`IFilter`](../type-aliases/IFilter.md)
+[`IFilter`](../type-aliases/IFilter)
 
 #### Returns
 
@@ -91,7 +91,7 @@ Defined in: [messages/MessageFree.ts:36](https://github.com/HarmonicLabs/mutexo-
 
 ##### filters
 
-[`IFilter`](../type-aliases/IFilter.md)[]
+[`IFilter`](../type-aliases/IFilter)[]
 
 #### Returns
 
@@ -149,7 +149,7 @@ Defined in: [messages/MessageFree.ts:57](https://github.com/HarmonicLabs/mutexo-
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`MutexoFree`](MutexoFree.md)
+> `static` **fromCbor**(`cbor`): [`MutexoFree`](MutexoFree)
 
 Defined in: [messages/MessageFree.ts:71](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageFree.ts#L71)
 
@@ -161,13 +161,13 @@ Defined in: [messages/MessageFree.ts:71](https://github.com/HarmonicLabs/mutexo-
 
 #### Returns
 
-[`MutexoFree`](MutexoFree.md)
+[`MutexoFree`](MutexoFree)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`MutexoFree`](MutexoFree.md)
+> `static` **fromCborObj**(`cbor`): [`MutexoFree`](MutexoFree)
 
 Defined in: [messages/MessageFree.ts:76](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageFree.ts#L76)
 
@@ -179,4 +179,4 @@ Defined in: [messages/MessageFree.ts:76](https://github.com/HarmonicLabs/mutexo-
 
 #### Returns
 
-[`MutexoFree`](MutexoFree.md)
+[`MutexoFree`](MutexoFree)

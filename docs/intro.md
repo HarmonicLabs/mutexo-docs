@@ -7,7 +7,7 @@ slug: /
 
 Built with ❤️ by [Harmonic Laboratories](https://www.harmoniclabs.tech/)
 
-This documentation covers [`mutexo-server`](./server/getting-started.md) CLI and [`mutexo-client`](./client/getting-started.md) APIs.
+This documentation covers [`mutexo-server`](./server/getting-started) CLI and [`mutexo-client`](./client/getting-started) APIs.
 
 If you are using an older version, it is recommended to update to the latest version. 
 

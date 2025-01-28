@@ -6,7 +6,7 @@
 
 # Function: filterFromCborObj()
 
-> **filterFromCborObj**(`cbor`): [`Filter`](../type-aliases/Filter.md)
+> **filterFromCborObj**(`cbor`): [`Filter`](../type-aliases/Filter)
 
 Defined in: [clientReqs/filters/Filter.ts:8](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/filters/Filter.ts#L8)
 
@@ -18,4 +18,4 @@ Defined in: [clientReqs/filters/Filter.ts:8](https://github.com/HarmonicLabs/mut
 
 ## Returns
 
-[`Filter`](../type-aliases/Filter.md)
+[`Filter`](../type-aliases/Filter)

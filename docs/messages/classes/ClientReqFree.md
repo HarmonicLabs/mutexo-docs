@@ -12,13 +12,13 @@ Defined in: [clientReqs/ClientReqFree.ts:21](https://github.com/HarmonicLabs/mut
 
 - `ToCbor`
 - `ToCborObj`
-- [`IClientReqFree`](../interfaces/IClientReqFree.md)
+- [`IClientReqFree`](../interfaces/IClientReqFree)
 
 ## Constructors
 
 ### new ClientReqFree()
 
-> **new ClientReqFree**(`stuff`): [`ClientReqFree`](ClientReqFree.md)
+> **new ClientReqFree**(`stuff`): [`ClientReqFree`](ClientReqFree)
 
 Defined in: [clientReqs/ClientReqFree.ts:26](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientReqFree.ts#L26)
 
@@ -26,11 +26,11 @@ Defined in: [clientReqs/ClientReqFree.ts:26](https://github.com/HarmonicLabs/mut
 
 ##### stuff
 
-[`IClientReqFree`](../interfaces/IClientReqFree.md)
+[`IClientReqFree`](../interfaces/IClientReqFree)
 
 #### Returns
 
-[`ClientReqFree`](ClientReqFree.md)
+[`ClientReqFree`](ClientReqFree)
 
 ## Properties
 
@@ -42,7 +42,7 @@ Defined in: [clientReqs/ClientReqFree.ts:23](https://github.com/HarmonicLabs/mut
 
 #### Implementation of
 
-[`IClientReqFree`](../interfaces/IClientReqFree.md).[`id`](../interfaces/IClientReqFree.md#id)
+[`IClientReqFree`](../interfaces/IClientReqFree).[`id`](../interfaces/IClientReqFree.md#id)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [clientReqs/ClientReqFree.ts:24](https://github.com/HarmonicLabs/mut
 
 #### Implementation of
 
-[`IClientReqFree`](../interfaces/IClientReqFree.md).[`utxoRefs`](../interfaces/IClientReqFree.md#utxorefs)
+[`IClientReqFree`](../interfaces/IClientReqFree).[`utxoRefs`](../interfaces/IClientReqFree.md#utxorefs)
 
 ## Methods
 
@@ -104,7 +104,7 @@ Defined in: [clientReqs/ClientReqFree.ts:43](https://github.com/HarmonicLabs/mut
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`ClientReqFree`](ClientReqFree.md)
+> `static` **fromCbor**(`cbor`): [`ClientReqFree`](ClientReqFree)
 
 Defined in: [clientReqs/ClientReqFree.ts:53](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientReqFree.ts#L53)
 
@@ -116,13 +116,13 @@ Defined in: [clientReqs/ClientReqFree.ts:53](https://github.com/HarmonicLabs/mut
 
 #### Returns
 
-[`ClientReqFree`](ClientReqFree.md)
+[`ClientReqFree`](ClientReqFree)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`ClientReqFree`](ClientReqFree.md)
+> `static` **fromCborObj**(`cbor`): [`ClientReqFree`](ClientReqFree)
 
 Defined in: [clientReqs/ClientReqFree.ts:57](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientReqFree.ts#L57)
 
@@ -134,4 +134,4 @@ Defined in: [clientReqs/ClientReqFree.ts:57](https://github.com/HarmonicLabs/mut
 
 #### Returns
 
-[`ClientReqFree`](ClientReqFree.md)
+[`ClientReqFree`](ClientReqFree)

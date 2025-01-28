@@ -12,13 +12,13 @@ Defined in: [clientReqs/ClientSub.ts:24](https://github.com/HarmonicLabs/mutexo-
 
 - `ToCbor`
 - `ToCborObj`
-- [`IClientSub`](../interfaces/IClientSub.md)
+- [`IClientSub`](../interfaces/IClientSub)
 
 ## Constructors
 
 ### new ClientSub()
 
-> **new ClientSub**(`stuff`): [`ClientSub`](ClientSub.md)
+> **new ClientSub**(`stuff`): [`ClientSub`](ClientSub)
 
 Defined in: [clientReqs/ClientSub.ts:30](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientSub.ts#L30)
 
@@ -26,35 +26,35 @@ Defined in: [clientReqs/ClientSub.ts:30](https://github.com/HarmonicLabs/mutexo-
 
 ##### stuff
 
-[`IClientSub`](../interfaces/IClientSub.md)
+[`IClientSub`](../interfaces/IClientSub)
 
 #### Returns
 
-[`ClientSub`](ClientSub.md)
+[`ClientSub`](ClientSub)
 
 ## Properties
 
 ### chainEventIndex
 
-> `readonly` **chainEventIndex**: [`MutexoChainEventIndex`](../type-aliases/MutexoChainEventIndex.md)
+> `readonly` **chainEventIndex**: [`MutexoChainEventIndex`](../type-aliases/MutexoChainEventIndex)
 
 Defined in: [clientReqs/ClientSub.ts:27](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientSub.ts#L27)
 
 #### Implementation of
 
-[`IClientSub`](../interfaces/IClientSub.md).[`chainEventIndex`](../interfaces/IClientSub.md#chaineventindex)
+[`IClientSub`](../interfaces/IClientSub).[`chainEventIndex`](../interfaces/IClientSub.md#chaineventindex)
 
 ***
 
 ### filters
 
-> `readonly` **filters**: [`Filter`](../type-aliases/Filter.md)[]
+> `readonly` **filters**: [`Filter`](../type-aliases/Filter)[]
 
 Defined in: [clientReqs/ClientSub.ts:28](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientSub.ts#L28)
 
 #### Implementation of
 
-[`IClientSub`](../interfaces/IClientSub.md).[`filters`](../interfaces/IClientSub.md#filters)
+[`IClientSub`](../interfaces/IClientSub).[`filters`](../interfaces/IClientSub.md#filters)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [clientReqs/ClientSub.ts:26](https://github.com/HarmonicLabs/mutexo-
 
 #### Implementation of
 
-[`IClientSub`](../interfaces/IClientSub.md).[`id`](../interfaces/IClientSub.md#id)
+[`IClientSub`](../interfaces/IClientSub).[`id`](../interfaces/IClientSub.md#id)
 
 ## Methods
 
@@ -116,7 +116,7 @@ Defined in: [clientReqs/ClientSub.ts:44](https://github.com/HarmonicLabs/mutexo-
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`ClientSub`](ClientSub.md)
+> `static` **fromCbor**(`cbor`): [`ClientSub`](ClientSub)
 
 Defined in: [clientReqs/ClientSub.ts:55](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientSub.ts#L55)
 
@@ -128,13 +128,13 @@ Defined in: [clientReqs/ClientSub.ts:55](https://github.com/HarmonicLabs/mutexo-
 
 #### Returns
 
-[`ClientSub`](ClientSub.md)
+[`ClientSub`](ClientSub)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`ClientSub`](ClientSub.md)
+> `static` **fromCborObj**(`cbor`): [`ClientSub`](ClientSub)
 
 Defined in: [clientReqs/ClientSub.ts:59](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientSub.ts#L59)
 
@@ -146,4 +146,4 @@ Defined in: [clientReqs/ClientSub.ts:59](https://github.com/HarmonicLabs/mutexo-
 
 #### Returns
 
-[`ClientSub`](ClientSub.md)
+[`ClientSub`](ClientSub)

@@ -52,7 +52,7 @@ const mutexo = new MutexoClient(
 
 `MutexoClient` is a class that handles the events emitted by the [`mutexo-server`](../server/getting-started).
 
-To do so it exposes an [API](./api/) that allow you to [subscribe](./api/sub) (or [unsubscribe](./api/unsub)) to events of your interest
+To do so it exposes an [API](../category/api) that allow you to [subscribe](./api/sub) (or [unsubscribe](./api/unsub)) to events of your interest
 and to handle them using callbacks (that you can add and remove using
 the [`addEventListener`](./api/addEventListener) and [`removeEventListener`](./api/removeEventListener) methods)
 

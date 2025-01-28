@@ -6,7 +6,7 @@
 
 # Function: mutexoMessageFromCbor()
 
-> **mutexoMessageFromCbor**(`cbor`): [`MutexoMessage`](../type-aliases/MutexoMessage.md)
+> **mutexoMessageFromCbor**(`cbor`): [`MutexoMessage`](../type-aliases/MutexoMessage)
 
 Defined in: [MutexoMessage.ts:92](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/MutexoMessage.ts#L92)
 
@@ -18,4 +18,4 @@ Defined in: [MutexoMessage.ts:92](https://github.com/HarmonicLabs/mutexo-message
 
 ## Returns
 
-[`MutexoMessage`](../type-aliases/MutexoMessage.md)
+[`MutexoMessage`](../type-aliases/MutexoMessage)

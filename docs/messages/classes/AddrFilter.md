@@ -12,13 +12,13 @@ Defined in: [clientReqs/filters/AddrFilter.ts:15](https://github.com/HarmonicLab
 
 - `ToCbor`
 - `ToCborObj`
-- [`IAddrFilter`](../interfaces/IAddrFilter.md)
+- [`IAddrFilter`](../interfaces/IAddrFilter)
 
 ## Constructors
 
 ### new AddrFilter()
 
-> **new AddrFilter**(`__namedParameters`): [`AddrFilter`](AddrFilter.md)
+> **new AddrFilter**(`__namedParameters`): [`AddrFilter`](AddrFilter)
 
 Defined in: [clientReqs/filters/AddrFilter.ts:19](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/filters/AddrFilter.ts#L19)
 
@@ -26,11 +26,11 @@ Defined in: [clientReqs/filters/AddrFilter.ts:19](https://github.com/HarmonicLab
 
 ##### \_\_namedParameters
 
-[`IAddrFilter`](../interfaces/IAddrFilter.md)
+[`IAddrFilter`](../interfaces/IAddrFilter)
 
 #### Returns
 
-[`AddrFilter`](AddrFilter.md)
+[`AddrFilter`](AddrFilter)
 
 ## Properties
 
@@ -42,7 +42,7 @@ Defined in: [clientReqs/filters/AddrFilter.ts:17](https://github.com/HarmonicLab
 
 #### Implementation of
 
-[`IAddrFilter`](../interfaces/IAddrFilter.md).[`addr`](../interfaces/IAddrFilter.md#addr)
+[`IAddrFilter`](../interfaces/IAddrFilter).[`addr`](../interfaces/IAddrFilter.md#addr)
 
 ## Methods
 
@@ -80,7 +80,7 @@ Defined in: [clientReqs/filters/AddrFilter.ts:29](https://github.com/HarmonicLab
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`AddrFilter`](AddrFilter.md)
+> `static` **fromCbor**(`cbor`): [`AddrFilter`](AddrFilter)
 
 Defined in: [clientReqs/filters/AddrFilter.ts:37](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/filters/AddrFilter.ts#L37)
 
@@ -92,13 +92,13 @@ Defined in: [clientReqs/filters/AddrFilter.ts:37](https://github.com/HarmonicLab
 
 #### Returns
 
-[`AddrFilter`](AddrFilter.md)
+[`AddrFilter`](AddrFilter)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`AddrFilter`](AddrFilter.md)
+> `static` **fromCborObj**(`cbor`): [`AddrFilter`](AddrFilter)
 
 Defined in: [clientReqs/filters/AddrFilter.ts:42](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/filters/AddrFilter.ts#L42)
 
@@ -110,4 +110,4 @@ Defined in: [clientReqs/filters/AddrFilter.ts:42](https://github.com/HarmonicLab
 
 #### Returns
 
-[`AddrFilter`](AddrFilter.md)
+[`AddrFilter`](AddrFilter)

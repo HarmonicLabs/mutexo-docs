@@ -6,7 +6,7 @@
 
 # Function: mutexoMessageToName()
 
-> **mutexoMessageToName**(`msg`): [`MutexoEventName`](../type-aliases/MutexoEventName.md)
+> **mutexoMessageToName**(`msg`): [`MutexoEventName`](../type-aliases/MutexoEventName)
 
 Defined in: [MutexoMessage.ts:67](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/MutexoMessage.ts#L67)
 
@@ -14,8 +14,8 @@ Defined in: [MutexoMessage.ts:67](https://github.com/HarmonicLabs/mutexo-message
 
 ### msg
 
-[`MutexoMessage`](../type-aliases/MutexoMessage.md)
+[`MutexoMessage`](../type-aliases/MutexoMessage)
 
 ## Returns
 
-[`MutexoEventName`](../type-aliases/MutexoEventName.md)
+[`MutexoEventName`](../type-aliases/MutexoEventName)

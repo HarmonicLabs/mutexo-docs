@@ -12,7 +12,7 @@ Defined in: [clientReqs/ClientSub.ts:8](https://github.com/HarmonicLabs/mutexo-m
 
 ### chainEventIndex
 
-> **chainEventIndex**: [`MutexoChainEventIndex`](../type-aliases/MutexoChainEventIndex.md)
+> **chainEventIndex**: [`MutexoChainEventIndex`](../type-aliases/MutexoChainEventIndex)
 
 Defined in: [clientReqs/ClientSub.ts:10](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientSub.ts#L10)
 
@@ -20,7 +20,7 @@ Defined in: [clientReqs/ClientSub.ts:10](https://github.com/HarmonicLabs/mutexo-
 
 ### filters
 
-> **filters**: [`IFilter`](../type-aliases/IFilter.md)[]
+> **filters**: [`IFilter`](../type-aliases/IFilter)[]
 
 Defined in: [clientReqs/ClientSub.ts:11](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientSub.ts#L11)
 

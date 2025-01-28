@@ -14,7 +14,7 @@ Defined in: [events/MutexoEventListener.ts:3](https://github.com/HarmonicLabs/mu
 
 ### msg
 
-[`MutexoMessage`](MutexoMessage.md)
+[`MutexoMessage`](MutexoMessage)
 
 ## Returns
 

@@ -12,13 +12,13 @@ only events triggered by the server
 
 ## Extended by
 
-- [`MutexoEventListeners`](MutexoEventListeners.md)
+- [`MutexoEventListeners`](MutexoEventListeners)
 
 ## Properties
 
 ### free
 
-> **free**: [`MutexoEventListener`](../type-aliases/MutexoEventListener.md)[]
+> **free**: [`MutexoEventListener`](../type-aliases/MutexoEventListener)[]
 
 Defined in: [events/MutexoChainEventListeners.ts:5](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/events/MutexoChainEventListeners.ts#L5)
 
@@ -26,7 +26,7 @@ Defined in: [events/MutexoChainEventListeners.ts:5](https://github.com/HarmonicL
 
 ### input
 
-> **input**: [`MutexoEventListener`](../type-aliases/MutexoEventListener.md)[]
+> **input**: [`MutexoEventListener`](../type-aliases/MutexoEventListener)[]
 
 Defined in: [events/MutexoChainEventListeners.ts:7](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/events/MutexoChainEventListeners.ts#L7)
 
@@ -34,7 +34,7 @@ Defined in: [events/MutexoChainEventListeners.ts:7](https://github.com/HarmonicL
 
 ### lock
 
-> **lock**: [`MutexoEventListener`](../type-aliases/MutexoEventListener.md)[]
+> **lock**: [`MutexoEventListener`](../type-aliases/MutexoEventListener)[]
 
 Defined in: [events/MutexoChainEventListeners.ts:6](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/events/MutexoChainEventListeners.ts#L6)
 
@@ -42,6 +42,6 @@ Defined in: [events/MutexoChainEventListeners.ts:6](https://github.com/HarmonicL
 
 ### output
 
-> **output**: [`MutexoEventListener`](../type-aliases/MutexoEventListener.md)[]
+> **output**: [`MutexoEventListener`](../type-aliases/MutexoEventListener)[]
 
 Defined in: [events/MutexoChainEventListeners.ts:8](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/events/MutexoChainEventListeners.ts#L8)

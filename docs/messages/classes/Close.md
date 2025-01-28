@@ -12,14 +12,14 @@ Defined in: [messages/MessageClose.ts:17](https://github.com/HarmonicLabs/mutexo
 
 - `ToCbor`
 - `ToCborObj`
-- [`IClose`](../interfaces/IClose.md)
+- [`IClose`](../interfaces/IClose)
 - `ISatisfiesFilter`
 
 ## Constructors
 
 ### new Close()
 
-> **new Close**(`stuff`?): [`Close`](Close.md)
+> **new Close**(`stuff`?): [`Close`](Close)
 
 Defined in: [messages/MessageClose.ts:20](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageClose.ts#L20)
 
@@ -27,11 +27,11 @@ Defined in: [messages/MessageClose.ts:20](https://github.com/HarmonicLabs/mutexo
 
 ##### stuff?
 
-[`IClose`](../interfaces/IClose.md)
+[`IClose`](../interfaces/IClose)
 
 #### Returns
 
-[`Close`](Close.md)
+[`Close`](Close)
 
 ## Methods
 
@@ -45,7 +45,7 @@ Defined in: [messages/MessageClose.ts:23](https://github.com/HarmonicLabs/mutexo
 
 ##### filter
 
-[`IFilter`](../type-aliases/IFilter.md)
+[`IFilter`](../type-aliases/IFilter)
 
 #### Returns
 
@@ -67,7 +67,7 @@ Defined in: [messages/MessageClose.ts:22](https://github.com/HarmonicLabs/mutexo
 
 ##### filters
 
-[`IFilter`](../type-aliases/IFilter.md)[]
+[`IFilter`](../type-aliases/IFilter)[]
 
 #### Returns
 
@@ -125,7 +125,7 @@ Defined in: [messages/MessageClose.ts:29](https://github.com/HarmonicLabs/mutexo
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`Close`](Close.md)
+> `static` **fromCbor**(`cbor`): [`Close`](Close)
 
 Defined in: [messages/MessageClose.ts:42](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageClose.ts#L42)
 
@@ -137,13 +137,13 @@ Defined in: [messages/MessageClose.ts:42](https://github.com/HarmonicLabs/mutexo
 
 #### Returns
 
-[`Close`](Close.md)
+[`Close`](Close)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`Close`](Close.md)
+> `static` **fromCborObj**(`cbor`): [`Close`](Close)
 
 Defined in: [messages/MessageClose.ts:48](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageClose.ts#L48)
 
@@ -155,4 +155,4 @@ Defined in: [messages/MessageClose.ts:48](https://github.com/HarmonicLabs/mutexo
 
 #### Returns
 
-[`Close`](Close.md)
+[`Close`](Close)

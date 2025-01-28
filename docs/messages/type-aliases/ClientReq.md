@@ -6,6 +6,6 @@
 
 # Type Alias: ClientReq
 
-> **ClientReq**: [`ClientReqFree`](../classes/ClientReqFree.md) \| [`ClientReqLock`](../classes/ClientReqLock.md) \| [`ClientSub`](../classes/ClientSub.md) \| [`ClientUnsub`](../classes/ClientUnsub.md) \| [`Close`](../classes/Close.md)
+> **ClientReq**: [`ClientReqFree`](../classes/ClientReqFree) \| [`ClientReqLock`](../classes/ClientReqLock) \| [`ClientSub`](../classes/ClientSub) \| [`ClientUnsub`](../classes/ClientUnsub) \| [`Close`](../classes/Close)
 
 Defined in: [ClientReq.ts:9](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/ClientReq.ts#L9)

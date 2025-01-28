@@ -12,13 +12,13 @@ Defined in: [clientReqs/ClientReqLock.ts:22](https://github.com/HarmonicLabs/mut
 
 - `ToCbor`
 - `ToCborObj`
-- [`IClientReqLock`](../interfaces/IClientReqLock.md)
+- [`IClientReqLock`](../interfaces/IClientReqLock)
 
 ## Constructors
 
 ### new ClientReqLock()
 
-> **new ClientReqLock**(`stuff`): [`ClientReqLock`](ClientReqLock.md)
+> **new ClientReqLock**(`stuff`): [`ClientReqLock`](ClientReqLock)
 
 Defined in: [clientReqs/ClientReqLock.ts:28](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientReqLock.ts#L28)
 
@@ -26,11 +26,11 @@ Defined in: [clientReqs/ClientReqLock.ts:28](https://github.com/HarmonicLabs/mut
 
 ##### stuff
 
-[`IClientReqLock`](../interfaces/IClientReqLock.md)
+[`IClientReqLock`](../interfaces/IClientReqLock)
 
 #### Returns
 
-[`ClientReqLock`](ClientReqLock.md)
+[`ClientReqLock`](ClientReqLock)
 
 ## Properties
 
@@ -42,7 +42,7 @@ Defined in: [clientReqs/ClientReqLock.ts:24](https://github.com/HarmonicLabs/mut
 
 #### Implementation of
 
-[`IClientReqLock`](../interfaces/IClientReqLock.md).[`id`](../interfaces/IClientReqLock.md#id)
+[`IClientReqLock`](../interfaces/IClientReqLock).[`id`](../interfaces/IClientReqLock.md#id)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [clientReqs/ClientReqLock.ts:26](https://github.com/HarmonicLabs/mut
 
 #### Implementation of
 
-[`IClientReqLock`](../interfaces/IClientReqLock.md).[`required`](../interfaces/IClientReqLock.md#required)
+[`IClientReqLock`](../interfaces/IClientReqLock).[`required`](../interfaces/IClientReqLock.md#required)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [clientReqs/ClientReqLock.ts:25](https://github.com/HarmonicLabs/mut
 
 #### Implementation of
 
-[`IClientReqLock`](../interfaces/IClientReqLock.md).[`utxoRefs`](../interfaces/IClientReqLock.md#utxorefs)
+[`IClientReqLock`](../interfaces/IClientReqLock).[`utxoRefs`](../interfaces/IClientReqLock.md#utxorefs)
 
 ## Methods
 
@@ -116,7 +116,7 @@ Defined in: [clientReqs/ClientReqLock.ts:50](https://github.com/HarmonicLabs/mut
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`ClientReqLock`](ClientReqLock.md)
+> `static` **fromCbor**(`cbor`): [`ClientReqLock`](ClientReqLock)
 
 Defined in: [clientReqs/ClientReqLock.ts:61](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientReqLock.ts#L61)
 
@@ -128,13 +128,13 @@ Defined in: [clientReqs/ClientReqLock.ts:61](https://github.com/HarmonicLabs/mut
 
 #### Returns
 
-[`ClientReqLock`](ClientReqLock.md)
+[`ClientReqLock`](ClientReqLock)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`ClientReqLock`](ClientReqLock.md)
+> `static` **fromCborObj**(`cbor`): [`ClientReqLock`](ClientReqLock)
 
 Defined in: [clientReqs/ClientReqLock.ts:65](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientReqLock.ts#L65)
 
@@ -146,4 +146,4 @@ Defined in: [clientReqs/ClientReqLock.ts:65](https://github.com/HarmonicLabs/mut
 
 #### Returns
 
-[`ClientReqLock`](ClientReqLock.md)
+[`ClientReqLock`](ClientReqLock)

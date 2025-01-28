@@ -12,14 +12,14 @@ Defined in: [messages/MessageSubSuccess.ts:21](https://github.com/HarmonicLabs/m
 
 - `ToCbor`
 - `ToCborObj`
-- [`ISubSuccess`](../interfaces/ISubSuccess.md)
+- [`ISubSuccess`](../interfaces/ISubSuccess)
 - `ISatisfiesFilter`
 
 ## Constructors
 
 ### new SubSuccess()
 
-> **new SubSuccess**(`stuff`): [`SubSuccess`](SubSuccess.md)
+> **new SubSuccess**(`stuff`): [`SubSuccess`](SubSuccess)
 
 Defined in: [messages/MessageSubSuccess.ts:25](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageSubSuccess.ts#L25)
 
@@ -27,11 +27,11 @@ Defined in: [messages/MessageSubSuccess.ts:25](https://github.com/HarmonicLabs/m
 
 ##### stuff
 
-[`ISubSuccess`](../interfaces/ISubSuccess.md)
+[`ISubSuccess`](../interfaces/ISubSuccess)
 
 #### Returns
 
-[`SubSuccess`](SubSuccess.md)
+[`SubSuccess`](SubSuccess)
 
 ## Properties
 
@@ -43,7 +43,7 @@ Defined in: [messages/MessageSubSuccess.ts:23](https://github.com/HarmonicLabs/m
 
 #### Implementation of
 
-[`ISubSuccess`](../interfaces/ISubSuccess.md).[`id`](../interfaces/ISubSuccess.md#id)
+[`ISubSuccess`](../interfaces/ISubSuccess).[`id`](../interfaces/ISubSuccess.md#id)
 
 ## Methods
 
@@ -57,7 +57,7 @@ Defined in: [messages/MessageSubSuccess.ts:33](https://github.com/HarmonicLabs/m
 
 ##### filter
 
-[`IFilter`](../type-aliases/IFilter.md)
+[`IFilter`](../type-aliases/IFilter)
 
 #### Returns
 
@@ -79,7 +79,7 @@ Defined in: [messages/MessageSubSuccess.ts:32](https://github.com/HarmonicLabs/m
 
 ##### filters
 
-[`IFilter`](../type-aliases/IFilter.md)[]
+[`IFilter`](../type-aliases/IFilter)[]
 
 #### Returns
 
@@ -137,7 +137,7 @@ Defined in: [messages/MessageSubSuccess.ts:43](https://github.com/HarmonicLabs/m
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`SubSuccess`](SubSuccess.md)
+> `static` **fromCbor**(`cbor`): [`SubSuccess`](SubSuccess)
 
 Defined in: [messages/MessageSubSuccess.ts:53](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageSubSuccess.ts#L53)
 
@@ -149,13 +149,13 @@ Defined in: [messages/MessageSubSuccess.ts:53](https://github.com/HarmonicLabs/m
 
 #### Returns
 
-[`SubSuccess`](SubSuccess.md)
+[`SubSuccess`](SubSuccess)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`SubSuccess`](SubSuccess.md)
+> `static` **fromCborObj**(`cbor`): [`SubSuccess`](SubSuccess)
 
 Defined in: [messages/MessageSubSuccess.ts:58](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageSubSuccess.ts#L58)
 
@@ -167,4 +167,4 @@ Defined in: [messages/MessageSubSuccess.ts:58](https://github.com/HarmonicLabs/m
 
 #### Returns
 
-[`SubSuccess`](SubSuccess.md)
+[`SubSuccess`](SubSuccess)

@@ -20,7 +20,7 @@ Defined in: [messages/MessageMutexSuccess.ts:12](https://github.com/HarmonicLabs
 
 ### mutexOp
 
-> **mutexOp**: [`MutexOp`](../enumerations/MutexOp.md)
+> **mutexOp**: [`MutexOp`](../enumerations/MutexOp)
 
 Defined in: [messages/MessageMutexSuccess.ts:13](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageMutexSuccess.ts#L13)
 

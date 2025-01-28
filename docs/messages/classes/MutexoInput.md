@@ -12,14 +12,14 @@ Defined in: [messages/MessageInput.ts:26](https://github.com/HarmonicLabs/mutexo
 
 - `ToCbor`
 - `ToCborObj`
-- [`IMutexoInput`](../interfaces/IMutexoInput.md)
+- [`IMutexoInput`](../interfaces/IMutexoInput)
 - `ISatisfiesFilter`
 
 ## Constructors
 
 ### new MutexoInput()
 
-> **new MutexoInput**(`stuff`): [`MutexoInput`](MutexoInput.md)
+> **new MutexoInput**(`stuff`): [`MutexoInput`](MutexoInput)
 
 Defined in: [messages/MessageInput.ts:33](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageInput.ts#L33)
 
@@ -27,11 +27,11 @@ Defined in: [messages/MessageInput.ts:33](https://github.com/HarmonicLabs/mutexo
 
 ##### stuff
 
-[`IMutexoInput`](../interfaces/IMutexoInput.md)
+[`IMutexoInput`](../interfaces/IMutexoInput)
 
 #### Returns
 
-[`MutexoInput`](MutexoInput.md)
+[`MutexoInput`](MutexoInput)
 
 ## Properties
 
@@ -43,7 +43,7 @@ Defined in: [messages/MessageInput.ts:30](https://github.com/HarmonicLabs/mutexo
 
 #### Implementation of
 
-[`IMutexoInput`](../interfaces/IMutexoInput.md).[`addr`](../interfaces/IMutexoInput.md#addr)
+[`IMutexoInput`](../interfaces/IMutexoInput).[`addr`](../interfaces/IMutexoInput.md#addr)
 
 ***
 
@@ -55,7 +55,7 @@ Defined in: [messages/MessageInput.ts:31](https://github.com/HarmonicLabs/mutexo
 
 #### Implementation of
 
-[`IMutexoInput`](../interfaces/IMutexoInput.md).[`txHash`](../interfaces/IMutexoInput.md#txhash)
+[`IMutexoInput`](../interfaces/IMutexoInput).[`txHash`](../interfaces/IMutexoInput.md#txhash)
 
 ***
 
@@ -67,7 +67,7 @@ Defined in: [messages/MessageInput.ts:29](https://github.com/HarmonicLabs/mutexo
 
 #### Implementation of
 
-[`IMutexoInput`](../interfaces/IMutexoInput.md).[`utxoRef`](../interfaces/IMutexoInput.md#utxoref)
+[`IMutexoInput`](../interfaces/IMutexoInput).[`utxoRef`](../interfaces/IMutexoInput.md#utxoref)
 
 ## Methods
 
@@ -81,7 +81,7 @@ Defined in: [messages/MessageInput.ts:45](https://github.com/HarmonicLabs/mutexo
 
 ##### filter
 
-[`IFilter`](../type-aliases/IFilter.md)
+[`IFilter`](../type-aliases/IFilter)
 
 #### Returns
 
@@ -103,7 +103,7 @@ Defined in: [messages/MessageInput.ts:41](https://github.com/HarmonicLabs/mutexo
 
 ##### filters
 
-[`IFilter`](../type-aliases/IFilter.md)[]
+[`IFilter`](../type-aliases/IFilter)[]
 
 #### Returns
 
@@ -161,7 +161,7 @@ Defined in: [messages/MessageInput.ts:62](https://github.com/HarmonicLabs/mutexo
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`MutexoInput`](MutexoInput.md)
+> `static` **fromCbor**(`cbor`): [`MutexoInput`](MutexoInput)
 
 Defined in: [messages/MessageInput.ts:77](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageInput.ts#L77)
 
@@ -173,13 +173,13 @@ Defined in: [messages/MessageInput.ts:77](https://github.com/HarmonicLabs/mutexo
 
 #### Returns
 
-[`MutexoInput`](MutexoInput.md)
+[`MutexoInput`](MutexoInput)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`MutexoInput`](MutexoInput.md)
+> `static` **fromCborObj**(`cbor`): [`MutexoInput`](MutexoInput)
 
 Defined in: [messages/MessageInput.ts:82](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageInput.ts#L82)
 
@@ -191,4 +191,4 @@ Defined in: [messages/MessageInput.ts:82](https://github.com/HarmonicLabs/mutexo
 
 #### Returns
 
-[`MutexoInput`](MutexoInput.md)
+[`MutexoInput`](MutexoInput)

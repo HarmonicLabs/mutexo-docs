@@ -12,13 +12,13 @@ Defined in: [clientReqs/ClientUnsub.ts:23](https://github.com/HarmonicLabs/mutex
 
 - `ToCbor`
 - `ToCborObj`
-- [`IClientUnsub`](../interfaces/IClientUnsub.md)
+- [`IClientUnsub`](../interfaces/IClientUnsub)
 
 ## Constructors
 
 ### new ClientUnsub()
 
-> **new ClientUnsub**(`stuff`): [`ClientUnsub`](ClientUnsub.md)
+> **new ClientUnsub**(`stuff`): [`ClientUnsub`](ClientUnsub)
 
 Defined in: [clientReqs/ClientUnsub.ts:29](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientUnsub.ts#L29)
 
@@ -26,35 +26,35 @@ Defined in: [clientReqs/ClientUnsub.ts:29](https://github.com/HarmonicLabs/mutex
 
 ##### stuff
 
-[`IClientUnsub`](../interfaces/IClientUnsub.md)
+[`IClientUnsub`](../interfaces/IClientUnsub)
 
 #### Returns
 
-[`ClientUnsub`](ClientUnsub.md)
+[`ClientUnsub`](ClientUnsub)
 
 ## Properties
 
 ### chainEventIndex
 
-> `readonly` **chainEventIndex**: [`MutexoChainEventIndex`](../type-aliases/MutexoChainEventIndex.md)
+> `readonly` **chainEventIndex**: [`MutexoChainEventIndex`](../type-aliases/MutexoChainEventIndex)
 
 Defined in: [clientReqs/ClientUnsub.ts:26](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientUnsub.ts#L26)
 
 #### Implementation of
 
-[`IClientUnsub`](../interfaces/IClientUnsub.md).[`chainEventIndex`](../interfaces/IClientUnsub.md#chaineventindex)
+[`IClientUnsub`](../interfaces/IClientUnsub).[`chainEventIndex`](../interfaces/IClientUnsub.md#chaineventindex)
 
 ***
 
 ### filters
 
-> `readonly` **filters**: [`Filter`](../type-aliases/Filter.md)[]
+> `readonly` **filters**: [`Filter`](../type-aliases/Filter)[]
 
 Defined in: [clientReqs/ClientUnsub.ts:27](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientUnsub.ts#L27)
 
 #### Implementation of
 
-[`IClientUnsub`](../interfaces/IClientUnsub.md).[`filters`](../interfaces/IClientUnsub.md#filters)
+[`IClientUnsub`](../interfaces/IClientUnsub).[`filters`](../interfaces/IClientUnsub.md#filters)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [clientReqs/ClientUnsub.ts:25](https://github.com/HarmonicLabs/mutex
 
 #### Implementation of
 
-[`IClientUnsub`](../interfaces/IClientUnsub.md).[`id`](../interfaces/IClientUnsub.md#id)
+[`IClientUnsub`](../interfaces/IClientUnsub).[`id`](../interfaces/IClientUnsub.md#id)
 
 ## Methods
 
@@ -116,7 +116,7 @@ Defined in: [clientReqs/ClientUnsub.ts:43](https://github.com/HarmonicLabs/mutex
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`ClientUnsub`](ClientUnsub.md)
+> `static` **fromCbor**(`cbor`): [`ClientUnsub`](ClientUnsub)
 
 Defined in: [clientReqs/ClientUnsub.ts:54](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientUnsub.ts#L54)
 
@@ -128,13 +128,13 @@ Defined in: [clientReqs/ClientUnsub.ts:54](https://github.com/HarmonicLabs/mutex
 
 #### Returns
 
-[`ClientUnsub`](ClientUnsub.md)
+[`ClientUnsub`](ClientUnsub)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`ClientUnsub`](ClientUnsub.md)
+> `static` **fromCborObj**(`cbor`): [`ClientUnsub`](ClientUnsub)
 
 Defined in: [clientReqs/ClientUnsub.ts:58](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/clientReqs/ClientUnsub.ts#L58)
 
@@ -146,4 +146,4 @@ Defined in: [clientReqs/ClientUnsub.ts:58](https://github.com/HarmonicLabs/mutex
 
 #### Returns
 
-[`ClientUnsub`](ClientUnsub.md)
+[`ClientUnsub`](ClientUnsub)

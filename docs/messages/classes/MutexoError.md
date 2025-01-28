@@ -12,14 +12,14 @@ Defined in: [messages/MessageError.ts:22](https://github.com/HarmonicLabs/mutexo
 
 - `ToCbor`
 - `ToCborObj`
-- [`IMutexoError`](../interfaces/IMutexoError.md)
+- [`IMutexoError`](../interfaces/IMutexoError)
 - `ISatisfiesFilter`
 
 ## Constructors
 
 ### new MutexoError()
 
-> **new MutexoError**(`stuff`): [`MutexoError`](MutexoError.md)
+> **new MutexoError**(`stuff`): [`MutexoError`](MutexoError)
 
 Defined in: [messages/MessageError.ts:32](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageError.ts#L32)
 
@@ -27,11 +27,11 @@ Defined in: [messages/MessageError.ts:32](https://github.com/HarmonicLabs/mutexo
 
 ##### stuff
 
-[`IMutexoError`](../interfaces/IMutexoError.md)
+[`IMutexoError`](../interfaces/IMutexoError)
 
 #### Returns
 
-[`MutexoError`](MutexoError.md)
+[`MutexoError`](MutexoError)
 
 ## Properties
 
@@ -43,7 +43,7 @@ Defined in: [messages/MessageError.ts:25](https://github.com/HarmonicLabs/mutexo
 
 #### Implementation of
 
-[`IMutexoError`](../interfaces/IMutexoError.md).[`errorCode`](../interfaces/IMutexoError.md#errorcode)
+[`IMutexoError`](../interfaces/IMutexoError).[`errorCode`](../interfaces/IMutexoError.md#errorcode)
 
 ## Accessors
 
@@ -71,7 +71,7 @@ Defined in: [messages/MessageError.ts:40](https://github.com/HarmonicLabs/mutexo
 
 ##### filter
 
-[`IFilter`](../type-aliases/IFilter.md)
+[`IFilter`](../type-aliases/IFilter)
 
 #### Returns
 
@@ -93,7 +93,7 @@ Defined in: [messages/MessageError.ts:39](https://github.com/HarmonicLabs/mutexo
 
 ##### filters
 
-[`IFilter`](../type-aliases/IFilter.md)[]
+[`IFilter`](../type-aliases/IFilter)[]
 
 #### Returns
 
@@ -151,7 +151,7 @@ Defined in: [messages/MessageError.ts:50](https://github.com/HarmonicLabs/mutexo
 
 ### fromCbor()
 
-> `static` **fromCbor**(`cbor`): [`MutexoError`](MutexoError.md)
+> `static` **fromCbor**(`cbor`): [`MutexoError`](MutexoError)
 
 Defined in: [messages/MessageError.ts:60](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageError.ts#L60)
 
@@ -163,13 +163,13 @@ Defined in: [messages/MessageError.ts:60](https://github.com/HarmonicLabs/mutexo
 
 #### Returns
 
-[`MutexoError`](MutexoError.md)
+[`MutexoError`](MutexoError)
 
 ***
 
 ### fromCborObj()
 
-> `static` **fromCborObj**(`cbor`): [`MutexoError`](MutexoError.md)
+> `static` **fromCborObj**(`cbor`): [`MutexoError`](MutexoError)
 
 Defined in: [messages/MessageError.ts:65](https://github.com/HarmonicLabs/mutexo-messages/blob/aefac8841dc1fa8aebb577df666016362446522d/src/messages/MessageError.ts#L65)
 
@@ -181,4 +181,4 @@ Defined in: [messages/MessageError.ts:65](https://github.com/HarmonicLabs/mutexo
 
 #### Returns
 
-[`MutexoError`](MutexoError.md)
+[`MutexoError`](MutexoError)
